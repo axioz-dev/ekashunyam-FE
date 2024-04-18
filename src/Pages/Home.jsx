@@ -43,7 +43,7 @@
 
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Marquee from "@/components/Additional/Marquee/Marquee";
+// import Marquee from "@/components/Additional/Marquee/Marquee";
 import Brochure from "@/components/Additional/Brochure/Brochure";
 import Footer from "@/components/Additional/Footer/Footer";
 // import ImgRender from "@/components/Additional/ImageRender/ImageRender";
@@ -51,7 +51,7 @@ import Glass from "@/components/Additional/Glassmorphism/Glass";
 import Developers from "@/components/Additional/Developers/Developers";
 import Landing from "@/components/Additional/Landing/Landing";
 import Navbar from "@/components/Additional/Navbar/Navbar";
-import MyComponent from "@/components/Additional/Parralax/MyComponent";
+// import MyComponent from "@/components/Additional/Parralax/MyComponent";
 
 const Home = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -85,9 +85,9 @@ const Home = () => {
   // }, []);
 
   return (
-    <div>
+    <div className="overflow-hidden">
       {/* <MyComponent /> */}
-
+      {/* <div className="bg-blue-500 w-screen h-screen"></div>  */}
       <Navbar></Navbar>
       <Landing></Landing>
 
@@ -106,7 +106,7 @@ const Home = () => {
 
       <Glass />
       <Brochure />
-      <Marquee />
+      {/* <Marquee /> */}
       <Developers />
       <Footer />
     </div>

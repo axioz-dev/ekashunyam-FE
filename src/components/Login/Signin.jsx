@@ -3,6 +3,8 @@ import { useState } from "react";
 import useSignin from "@/Hooks/useSignin";
 import Signup from "./Signup";
 import Loader from "../Loader/Loader";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/variants";
 
 const Signin = () => {
   const { loading, signinverify } = useSignin();
@@ -22,7 +24,13 @@ const Signin = () => {
       {loginmode ? (
         <>
           {loading ? <Loader /> : null}
-          <div className="bg-black w-screen flex lg:justify-center lg:items-center lg:h-screen">
+          <motion.div
+            variants={fadeIn("down", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="bg-black w-screen flex lg:justify-center lg:items-center lg:h-screen"
+          >
             <div className="flex flex-col lg:flex-row lg:items-center xl:w-3/4 lg:w-[90vw] lg:h-3/4 lg:rounded-xl w-screen ">
               <div className="bg-gray-500 h-80 bg-bottom bg-cover bg-[url('/src/Public/Images/Login_Page/1.jpeg')] lg:h-full lg:w-3/4 lg:rounded-xl animate-pulse duration-[4000]"></div>
               <div className="px-16 py-14 lg:h-screen lg:w-full lg:pt-48 sm:text-center">
@@ -100,7 +108,7 @@ const Signin = () => {
                 </form>
               </div>
             </div>
-          </div>
+          </motion.div>
         </>
       ) : (
         <Signup />

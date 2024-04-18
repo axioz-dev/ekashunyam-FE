@@ -2,12 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { InstagramIcon, EmailIcon, PhoneIcon } from "@/Public/Svg/Svg";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/variants";
 
 const Footer = () => {
   return (
     <>
-      <div className="w-screen h-full md:h-full bg-black footer opacity-100 p-8 flex flex-col gap-4 sm:px-32 items-center bg-[url('/src/Public/Images/collections/4.jpg')] bg-top bg-cover">
-        <div className="border-2 border-black text-center text-white pt-6">
+      {/* <div className="w-screen h-full md:h-full bg-black footer opacity-100 p-8 flex flex-col gap-4 sm:px-32 items-center bg-[url('/src/Public/Images/collections/4.jpg')] bg-top bg-cover"> */}
+      <motion.div
+        variants={fadeIn("right", 0.4)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.2 }}
+        className="w-screen h-full md:h-full bg-[#111827] footer opacity-100 p-8 flex flex-col gap-4 sm:px-32 items-center"
+      >
+        <div className="text-center text-white pt-6">
           <h1 className="text-6xl font-megatron">Connect here</h1>
           <h4 className="text-md font-gilroy-light mt-4 mb-8">
             If you have any queries, feel free to contact us.
@@ -36,7 +45,7 @@ const Footer = () => {
           <h6 className="text-sm">© 2024 Ekashunyam.tech</h6>
           {/* <h2 className="text-xl font-gilroy-light">Lorem, ipsum dolor.</h2> */}
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

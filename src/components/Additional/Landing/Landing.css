@@ -42,3 +42,11 @@
 .animate-custom-pulse {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+.myhead {
+  background-image: url(https://e0.pxfuel.com/wallpapers/380/790/desktop-wallpaper-golden-gold-colour.jpg);
+  background-size: contain;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
