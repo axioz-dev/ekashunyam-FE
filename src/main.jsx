@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import axios from "axios";
 import { Toaster, ToastBar } from "react-hot-toast";
+import Rules from "../src/Pages/Rules";
 
 import {
   RouterProvider,
@@ -22,7 +23,10 @@ axios.defaults.withCredentials = true;
 const router = createBrowserRouter(
   createRoutesFromElements([
     [
-      <Route path="/" element={<Home />} />,
+      <Route path="/">
+        <Route path="" element={<Home />} />
+        <Route path="/event/:eventId" element={<Rules />} />
+      </Route>,
       <Route path="/login" element={<Login />} />,
       <Route path="/register" element={<Registration />} />,
       <Route path="*" element={<GlobalError />} />,
