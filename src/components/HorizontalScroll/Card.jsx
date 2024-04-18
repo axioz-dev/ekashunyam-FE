@@ -2,7 +2,7 @@ import { PinContainer } from "./3d-pin.jsx";
 
 function Card({ title, subTitle, img, to }) {
   // const bgClass = `bg-[url('${img}')] `;
-  console.log(img);
+
   return (
     <>
       <PinContainer

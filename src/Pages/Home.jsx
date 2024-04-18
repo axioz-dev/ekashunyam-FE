@@ -46,7 +46,7 @@ import { useNavigate } from "react-router-dom";
 // import Marquee from "@/components/Additional/Marquee/Marquee";
 import Brochure from "@/components/Additional/Brochure/Brochure";
 import Footer from "@/components/Additional/Footer/Footer";
-import ImgRender from "@/components/Additional/ImageRender/ImageRender";
+// import ImgRender from "@/components/Additional/ImageRender/ImageRender";
 import Glass from "@/components/Additional/Glassmorphism/Glass";
 import Developers from "@/components/Additional/Developers/Developers";
 import Landing from "@/components/Additional/Landing/Landing";
@@ -115,7 +115,7 @@ const Home = () => {
         )} */}
 
       {/* --------------------------------- ------------------------*/}
-      <ImgRender />
+      {/* <ImgRender /> */}
 
       <Glass />
       <HorizontalScroll />

@@ -120,14 +120,14 @@ const Form = ({ isregisterd, regdata }) => {
 
   return (
     <>
-      {loading && <Loader />}
+      {loading ? <Loader /> : null}
       <div className="bg-yellow-400 w-screen">
         <BentoBox regdata={regdata} />
 
-        <div style={{ display: isregisterd ? "none" : "block" }}>
+        <div style={{ display: regdata.count == 2 ? "none" : "block" }}>
           <form onSubmit={handleSubmit} className="">
             <div className="bg-inherit bg-contain bg-[url('/src/Public/Images/Dashboard_Page/1.jpg')] py-8 rounded-bl-3xl">
-            {/* <div className="py-8 rounded-bl-3xl"> */}
+              {/* <div className="py-8 rounded-bl-3xl"> */}
               <h1 className="font-megatron text-white text-5xl text-center mb-0 sm:text-6xl md:mb-3">
                 Registration
               </h1>

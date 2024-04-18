@@ -19,24 +19,42 @@ function useSubmit() {
         try {
             const response = await axios.post('api/user/fest/register', { formFields });
 
-            if (response.data.success) {
-                toast.success("Form submitted successfully")
-                navigate('/register')
-            } else {
-                toast.error("Error in submitting the form");
-                console.log(response.data.message);
-            }
+            toast.success(response.data.message, {
+                duration: 2000,
+                position: 'top-center',
+            });
+            console.log("Success: " + response.data.message);
+            window.location.reload();
+
+            // if (response.data.success) {
+            //     toast.success("Form submitted successfully")
+            //     navigate('/register')
+            // } else {
+            //     toast.error(error.response.data.message);
+            //     console.log(response.data.message);
+            // }
         } catch (error) {
             if (error.response && error.response.status >= 500) {
                 console.log('Something went wrong!');
-                toast.error("Something went wrong!");
+                toast.error("Something went wrong!", {
+                    duration: 2000,
+                    position: 'top-center',
+                });
+            }
+            else if (error.message) {
+                toast.error(error.response.data.message, {
+                    duration: 2000,
+                    position: 'top-center',
+                });
+                console.log(error.response.data.message);
             }
             else {
-                console.log(error.response.data.message);
-                toast.error(error.response.data.message);
+                console.log(error.response.data);
+                toast.error(error.response.data.message), {
+                    duration: 2000,
+                    position: 'top-center',
+                };
             }
-            console.log(error.message);
-            toast.error("Error in submitting the form");
         } finally {
             setLoading(false);
         }

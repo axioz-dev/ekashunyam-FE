@@ -15,10 +15,10 @@ const Navbar = () => {
           initial={{ top: -100 }}
           animate={{ top: 0 }}
           transition={{ duration: 3, ease: "anticipate" }}
-          class="fixed w-screen z-20 top-0 start-0 border-btext "
+          className="fixed w-screen z-20 top-0 start-0 border-btext "
         >
           {/* <nav class="fixed w-screen z-20 top-0 start-0 border-btext shadow-xl backdrop-blur-xl border-[0.8]"> */}
-          <div class="flex flex-wrap items-center justify-between mx-auto xl:mx-0 p-4 text-white ">
+          <div className="flex flex-wrap items-center justify-between mx-auto xl:mx-0 p-4 text-white ">
             <div className="flex items-center space-x-3 rtl:space-x-reverse border ml-10 h-10 w-10 ">
               <img
                 src="./Public/Images/Home/IT Club Logo.jpg"
@@ -26,7 +26,7 @@ const Navbar = () => {
                 className="h-10 w-10 object-cover object-center"
               />
             </div>
-            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
               <button
                 onClick={() => navigate("/register")}
                 type="button"
@@ -38,7 +38,7 @@ const Navbar = () => {
               <button
                 data-collapse-toggle="navbar-sticky"
                 type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden"
+                className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden"
                 onClick={() => {
                   setshowMenu(!showMenu);
                 }}
@@ -61,15 +61,15 @@ const Navbar = () => {
             </div>
 
             <div
-              class="bg-opacity-0 shadow-xl backdrop-blur-xl border-[0.8] border-opacity-20 flex-col cursor-pointer  hover:backdrop-blur-3xl transition-all duration-500 items-center justify-center hidden w-full md:flex md:w-96  border-white md:py-2 md:rounded-full "
+              className="bg-opacity-0 shadow-xl backdrop-blur-xl border-[0.8] border-opacity-20 flex-col cursor-pointer  hover:backdrop-blur-3xl transition-all duration-500 items-center justify-center hidden w-full md:flex md:w-96  border-white md:py-2 md:rounded-full "
               //   bg-opacity-0 shadow-xl backdrop-blur-3xl border-[0.8] border-opacity-20  flex items-center justify-evenly flex-col cursor-pointer  hover:backdrop-blur-md transition-all duration-500 ease-in-out
               id="navbar-sticky"
             >
-              <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+              <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                 <li>
                   <Link
                     to={"/"}
-                    class="block py-2  transition-all duration-1000 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                    className="block py-2  transition-all duration-1000 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                     aria-current="page"
                   >
                     <p className="text-white font-megatron tracking-wider hover:text-yellow-500 transition-all duration-300">
@@ -81,7 +81,7 @@ const Navbar = () => {
                   <Link
                     target="_blank"
                     to={"https://www.sdmcujire.in/"}
-                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     <p className="text-white font-megatron tracking-wider hover:text-yellow-500  transition-all duration-300">
                       About
@@ -91,7 +91,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     href="#"
-                    class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     <p className="text-white font-megatron tracking-wider hover:text-yellow-500 transition-all duration-300">
                       Contact
