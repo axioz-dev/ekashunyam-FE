@@ -3,23 +3,20 @@ import { useNavigate } from "react-router-dom";
 import { fadeIn } from "@/utils/variants";
 import {
   motion,
-  useInView,
-  useMotionValueEvent,
   useScroll,
-  useTransform,
 } from "framer-motion";
 
 const Glass = () => {
   const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start end", "center center"],
-  });
-  const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
-  const top = useTransform(scrollYProgress, [0, 1], ["0px", "-900px"]);
-  const opacity = useTransform(scrollYProgress, [0, 1], ["0", "1"]);
-  const scale = useTransform(scrollYProgress, [0, 1], ["1.8", "1"]);
-  const letterSpacing = useTransform(scrollYProgress, [0, 1], ["", "+3.8rem"]);
+  // const { scrollYProgress } = useScroll({
+  //   target: targetRef,
+  //   offset: ["start end", "center center"],
+  // });
+  // const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
+  // const top = useTransform(scrollYProgress, [0, 1], ["0px", "-900px"]);
+  // const opacity = useTransform(scrollYProgress, [0, 1], ["0", "1"]);
+  // const scale = useTransform(scrollYProgress, [0, 1], ["1.8", "1"]);
+  // const letterSpacing = useTransform(scrollYProgress, [0, 1], ["", "+3.8rem"]);
 
   const navigate = useNavigate();
   return (
@@ -33,7 +30,8 @@ const Glass = () => {
       viewport={{ once: false, amount: 0.2 }}
       className="h-screen"
     >
-      <motion.div className="bg-image dark-overlay bg-center bg-cover bg-[url('/src/Public/Images/collections/3.jpg')]   flex items-center justify-center w-screen px-8 gap-8 py-7 h-full">
+      {/* <motion.div className="bg-image dark-overlay bg-center bg-cover bg-[url('/src/Public/Images/collections/3.jpg')]   flex items-center justify-center w-screen px-8 gap-8 py-7 h-full"> */}
+      <motion.div className="bg-image dark-overlay flex items-center justify-center w-screen px-8 gap-8 py-7 h-full">
         {/* <div className=""> */}
         {/* <div className="bg-image dark-overlay bg-center bg-cover bg-[url('/src/Public/Images/Home/1.jpg')]  flex items-center justify-center w-screen px-8 gap-8 py-7 "> */}
         <div className="bg-opacity-0 shadow-xl backdrop-blur-3xl border-[0.8] border-opacity-20 rounded-lg w-[500px] p-6  flex items-center justify-evenly flex-col cursor-pointer sm:h-96 hover:backdrop-blur-md transition-all duration-500 xl:hover:w-2/5">

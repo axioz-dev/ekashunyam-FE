@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { CodeBracketIcon } from "@heroicons/react/24/solid";
 import {
   motion,
-  useAnimation,
-  useInView,
   useScroll,
   useTransform,
 } from "framer-motion";

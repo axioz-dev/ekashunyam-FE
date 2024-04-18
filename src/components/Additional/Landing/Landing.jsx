@@ -1,11 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./Landing.css";
-import Tilt from "react-parallax-tilt";
 import { LogoIcon } from "@/Public/Svg/Svg";
 import {
   motion,
-  useInView,
-  useMotionValueEvent,
   useScroll,
   useTransform,
 } from "framer-motion";
@@ -34,7 +31,7 @@ const Landing = () => {
     // offset: ["start start", "end start"],
   });
 
-  const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
+  // const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
   const top = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], ["1", "0"]);
   const scale = useTransform(scrollYProgress, [0, 1], ["1", "1.8"]);
