@@ -24,10 +24,10 @@ const Glass = () => {
       // ref={targetRef}
       // style={{ scale, opacity }}
       // transition={{ duration: 2, ease: "easeInOut", delay: 0 }}
-      variants={fadeIn("left", 0.4)}
-      initial="hidden"
-      whileInView={"show"}
-      viewport={{ once: false, amount: 0.2 }}
+      // variants={fadeIn("left", 0.4)}
+      // initial="hidden"
+      // whileInView={"show"}
+      // viewport={{ once: false, amount: 0.2 }}
       className="h-screen"
     >
       {/* <motion.div className="bg-image dark-overlay bg-center bg-cover bg-[url('/src/Public/Images/collections/3.jpg')]   flex items-center justify-center w-screen px-8 gap-8 py-7 h-full"> */}

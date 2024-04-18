@@ -54,8 +54,8 @@ function HorizontalScroll() {
 
   return (
     <>
-      <div className="overflow-hidden h-screen" id="scroll-wrapper">
-        <div className=" text-7xl text-center pt-8 pb-20"> EVENTS</div>
+      <div className="overflow-hidden h-screen" id="scroll-wrapper" >
+        <div className=" text-7xl text-center pt-8 pb-20 text-white font-megatron"> EVENTS</div>
 
         <div
           className="px-32 flex flex-nowrap gap-28  "
@@ -63,6 +63,7 @@ function HorizontalScroll() {
           ref={container}
         >
           <Card
+            
             title={"Auto Bot"}
             subTitle={"Quiz"}
             img={img1}
