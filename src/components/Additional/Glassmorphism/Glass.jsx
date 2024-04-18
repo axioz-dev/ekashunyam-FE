@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { fadeIn } from "@/utils/variants";
 import {
   motion,
-  useScroll,
 } from "framer-motion";
 
 const Glass = () => {
@@ -20,7 +19,7 @@ const Glass = () => {
 
   const navigate = useNavigate();
   return (
-    <motion.div
+    <div
       // ref={targetRef}
       // style={{ scale, opacity }}
       // transition={{ duration: 2, ease: "easeInOut", delay: 0 }}
@@ -31,7 +30,7 @@ const Glass = () => {
       className="h-screen"
     >
       {/* <motion.div className="bg-image dark-overlay bg-center bg-cover bg-[url('/src/Public/Images/collections/3.jpg')]   flex items-center justify-center w-screen px-8 gap-8 py-7 h-full"> */}
-      <motion.div className="bg-image dark-overlay flex items-center justify-center w-screen px-8 gap-8 py-7 h-full">
+      <div className="bg-image dark-overlay flex items-center justify-center w-screen px-8 gap-8 py-7 h-full">
         {/* <div className=""> */}
         {/* <div className="bg-image dark-overlay bg-center bg-cover bg-[url('/src/Public/Images/Home/1.jpg')]  flex items-center justify-center w-screen px-8 gap-8 py-7 "> */}
         <div className="bg-opacity-0 shadow-xl backdrop-blur-3xl border-[0.8] border-opacity-20 rounded-lg w-[500px] p-6  flex items-center justify-evenly flex-col cursor-pointer sm:h-96 hover:backdrop-blur-md transition-all duration-500 xl:hover:w-2/5">
@@ -52,8 +51,8 @@ const Glass = () => {
             </button>
           </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 

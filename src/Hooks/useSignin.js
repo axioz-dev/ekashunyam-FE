@@ -39,14 +39,14 @@ function useSignin() {
         });
       }
       else if (error.message) {
-        toast.error(error.message, {
+        toast.error(error.response.data.message, {
           duration: 2000,
           position: 'top-center',
         });
-        console.log(error.message);
+        console.log(error.response.data.message);
       }
       else {
-        console.log("hello"+error.response.data.message);
+        console.log(error.response.data);
         toast.error(error.response.data.message), {
           duration: 2000,
           position: 'top-center',

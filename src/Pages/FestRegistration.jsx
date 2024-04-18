@@ -9,6 +9,11 @@ const Registration = () => {
   const navigate = useNavigate();
   const [authenticated, setAuthenticated] = useState(false);
   const [isregistered, setisregistered] = useState(false);
+  const [regdata, setregdata] = useState({
+    count: 0,
+    college: "",
+    email: "",
+  });
   const [loading, setloading] = useState(true);
 
   //check if the user is authenticated
@@ -16,16 +21,22 @@ const Registration = () => {
     const checkAuthentication = async () => {
       try {
         const response = await axios.get("api/user/verify");
-        console.log(response);
         if (!response.data.success) {
           toast.error("You are not authorized to view this page");
           navigate("/login");
-        } else {  
+        } else {
           setAuthenticated(true);
+          setregdata((prevState) => ({
+            ...prevState,
+            count: response.data.data.registration,
+            college: response.data.data.collegeName,
+            email: response.data.data.email,
+          }));
+
           setisregistered(response.data.isregistered);
         }
       } catch (error) {
-        toast.error("Error in authorizing the user");
+        toast.error("Please Signup/Login to continue");
         console.error("Error in authorizing:", error);
         navigate("/login");
       } finally {
@@ -33,7 +44,7 @@ const Registration = () => {
       }
     };
     checkAuthentication();
-  });
+  }, []);
 
   return (
     <>
@@ -42,7 +53,7 @@ const Registration = () => {
           <Loader />
         </div>
       ) : authenticated ? (
-        <Form isregisterd={isregistered} />
+        <Form isregisterd={isregistered} regdata={regdata} />
       ) : (
         navigate("/login")
       )}

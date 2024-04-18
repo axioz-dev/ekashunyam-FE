@@ -1,9 +1,9 @@
 import React from "react";
 
-const BentoBox = () => {
+const BentoBox = ({ regdata }) => {
   return (
     <>
-      <section className="bg-bottom bg-black rounded-tl-3xl">
+      <section className="bg-bottom bg-black">
         <div className="text-white text-center pt-8 text-6xl font-megatron pb-12">
           <h1 className="bg-gradient-to-tr from-purple-900 via-yellow-50 to-yellow-500 bg-clip-text text-transparent">
             Dashboard
@@ -17,24 +17,25 @@ const BentoBox = () => {
           <div className="mx-auto px-6 max-w-6xl xl:max-w-full xl:px-16 text-gray-500">
             <div className="relative">
               <div className="relative z-10 grid gap-8 grid-cols-6 group">
-                {/* <div className="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-[28px] bg-white   dark:border-gray-800 dark:bg-gray-900  bg-opacity-10  border-white border-opacity-20 backdrop-blur-5  shadow-glass border-solid bg-gradient-to-br from-black to-purple-900  border-4"> */}
-                <div className="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-[28px] bg-white   dark:border-gray-800 dark:bg-gray-900  bg-opacity-10  border-white border-opacity-20 backdrop-blur-5  shadow-glass border-solid    bg-cover bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-2.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
+                {/* <div className="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-[28px] bg-white    bg-opacity-10  border-white border-opacity-20 backdrop-blur-5  shadow-glass border-solid bg-gradient-to-br from-black to-purple-900  border-4"> */}
+                <div className="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-[28px] bg-whit bg-opacity-10  border-white border-opacity-20 backdrop-blur-5  shadow-glass border-solid    bg-cover bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-2.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
                   <div className="size-fit m-auto relative ">
                     <div className="relative h-24 w-56 flex items-center  mx-auto font-megatron">
-                      <span className="w-fit block mx-auto text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-pink-600 dark:from-blue-400 dark:to-pink-400">
-                        Team
+                      <span className="w-fit block mx-auto text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-pink-600">
+                        College
                       </span>
                     </div>
-                    <h2 className="mt-4 text-center font-semibold text-yellow-100 dark:text-white text-2xl font-gilroy-light tracking-wider">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Deserunt, deleniti? Beatae, quibusdam.
+                    <h2 className="mt-4 text-center font-semibold text-yellow-100 text-3xl font-gilroy-light tracking-wider">
+                      {regdata.college}
+                      <br />
+                      <span className="text-xl text-black font-bold">{regdata.email}</span>
                     </h2>
                   </div>
                 </div>
 
-                <div className="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-8  bg-white  dark:bg-gray-900 rounded-[28px] bg-center bg-cover bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-1.webp')]  bg-opacity-50 cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105  duration-500">
+                <div className="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-8  bg-white rounded-[28px] bg-center bg-cover bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-1.webp')]  bg-opacity-50 cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105  duration-500">
                   <div>
-                    <div className="relative aspect-square rounded-full size-32 flex border mx-auto dark:bg-white/5 d before:absolute before:-inset-2 before:border dark:before:border-white/5 dark:before:bg-white/5 before:rounded-full bg-center bg-cover bg-[url('/src/Public/5.png ')] "></div>
+                    <div className="relative aspect-square rounded-full size-32 flex border mx-auto before:absolute before:-inset-2 before:border before:rounded-full bg-center bg-cover bg-[url('/src/Public/5.png ')] "></div>
                     <div className="mt-6 text-center relative z-10 space-y-2">
                       <h2 className="text-5xl font-medium  transition group-hover:text-yellow-500 text-white font-megatron mx-auto">
                         Ekashunyam
@@ -46,14 +47,14 @@ const BentoBox = () => {
                   </div>
                 </div>
 
-                <div className="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-8 rounded-xl bg-white  border-gray-200 dark:border-gray-800 dark:bg-gray-900 bg-center bg-cover bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-2.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
+                <div className="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-8 rounded-xl bg-white  border-gray-200 bg-center bg-cover bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-2.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
                   <div>
                     <div className="pt-6 lg:px-6 font-gilroy-light">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Quam!
                     </div>
                     <div className="mt-14 text-center relative z-10 space-y-2">
-                      <h2 className="text-3xl font-medium text-gray-800 transition  dark:text-white font-megatron">
+                      <h2 className="text-3xl font-medium text-gray-800 transition  font-megatron">
                         Lorem, ipsum.
                       </h2>
                       <p className="dark:text-gray-300 text-gray-700">
@@ -64,14 +65,14 @@ const BentoBox = () => {
                   </div>
                 </div>
 
-                <div className="col-span-full lg:col-span-3 overflow-hidden relative p-8 rounded-xl bg-white  border-gray-200 dark:border-gray-800 dark:bg-gray-900 bg-cover bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-5.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
+                <div className="col-span-full lg:col-span-3 overflow-hidden relative p-8 rounded-xl bg-white  border-gray-200 bg-cover bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-5.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
                   <div className="grid sm:grid-cols-2">
                     <div className="flex flex-col justify-between relative z-10 space-y-12 lg:space-y-6">
-                      <div className="relative aspect-square rounded-full size-12 flex border dark:bg-white/5 dark:border-white/10 before:absolute before:-inset-2 before:border dark:before:border-white/5 dark:before:bg-white/5 before:rounded-full">
+                      <div className="relative aspect-square rounded-full size-12 flex border   before:absolute before:-inset-2 before:border before:rounded-full">
                         icon
                       </div>
                       <div className="space-y-2">
-                        <h2 className="text-4xl font-medium text-gray-800 transition  dark:text-white font-megatron">
+                        <h2 className="text-4xl font-medium text-gray-800 transition  font-megatron">
                           Lorem, ipsum dolor.
                         </h2>
                         <p className="font-gilroy-light text-white">
@@ -80,14 +81,14 @@ const BentoBox = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="overflow-hidden relative mt-6 sm:mt-auto h-fit -mb-[34px] -mr-[34px] sm:ml-6 py-6 p-6 border rounded-tl-lg dark:bg-white/5 dark:border-white/10">
+                    <div className="overflow-hidden relative mt-6 sm:mt-auto h-fit -mb-[34px] -mr-[34px] sm:ml-6 py-6 p-6 border rounded-tl-lg  ">
                       <div className="absolute flex gap-3 top-2 left-3">
-                        <span className="block size-4 rounded-full border dark:border-white/10 dark:bg-white/10 bg-yellow-500"></span>
-                        <span className="block size-4 rounded-full border dark:border-white/10 dark:bg-white/10 bg-yellow-500"></span>
-                        <span className="block size-4 rounded-full border dark:border-white/10 dark:bg-white/10 bg-yellow-500"></span>
+                        <span className="block size-4 rounded-full border  bg-yellow-500"></span>
+                        <span className="block size-4 rounded-full border  bg-yellow-500"></span>
+                        <span className="block size-4 rounded-full border  bg-yellow-500"></span>
                       </div>
                       {/* w-full sm:w-[150%]" */}
-                      <svg
+                      {/* <svg
                         className="w-full sm:w-[150%]"
                         viewBox="0 0 366 231"
                         fill="none"
@@ -126,7 +127,7 @@ const BentoBox = () => {
                             ></stop>
                           </linearGradient>
                         </defs>
-                      </svg>
+                      </svg> */}
                     </div>
                   </div>
                 </div>
@@ -148,7 +149,7 @@ const BentoBox = () => {
                     <div className="mt-6 relative sm:-mr-[--card-padding] sm:-my-8 before:absolute before:w-px before:inset-0 before:mx-auto before:bg-gray-200 dark:before:bg-gray-800 cursor-pointer group-hover:blur-[2px] hover:!blur-none">
                       <div className="relative space-y-6 py-6 flex flex-col justify-center h-full">
                         <div className="flex items-center justify-end gap-2 w-[calc(50%+0.875rem)] relative">
-                          <span className="h-fit text-xs block px-2 py-1 shadow-sm border rounded-md dark:bg-gray-800 dark:border-white/5 dark:text-white">
+                          <span className="h-fit text-xs block px-2 py-1 shadow-sm border rounded-md dark:bg-gray-800 dark:border-white/5">
                             Glodie
                           </span>
                           <div className="size-7 ring-4 ring-white dark:ring-[--card-dark-bg]">
@@ -167,12 +168,12 @@ const BentoBox = () => {
                               alt=""
                             />
                           </div>
-                          <span className="h-fit text-xs block px-2 py-1 shadow-sm border rounded-md dark:bg-gray-800 dark:border-white/5 dark:text-white">
+                          <span className="h-fit text-xs block px-2 py-1 shadow-sm border rounded-md dark:bg-gray-800 dark:border-white/5">
                             M. Irung
                           </span>
                         </div>
                         <div className="flex items-center justify-end gap-2 w-[calc(50%+0.875rem)] relative">
-                          <span className="h-fit text-xs block px-2 py-1 shadow-sm border rounded-md dark:bg-gray-800 dark:border-white/5 dark:text-white">
+                          <span className="h-fit text-xs block px-2 py-1 shadow-sm border rounded-md dark:bg-gray-800 dark:border-white/5">
                             B. Ng
                           </span>
                           <div className="size-7 ring-4 ring-white dark:ring-[--card-dark-bg]">
@@ -187,7 +188,6 @@ const BentoBox = () => {
                     </div>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>

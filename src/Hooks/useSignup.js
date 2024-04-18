@@ -52,7 +52,7 @@ function useSignup() {
                 toast.error("Something went wrong!");
             }
             else if(error.message){
-                toast.error(error.message);
+                toast.error(error.response.data.message);
                 console.log(error.message);
             }
             else {
