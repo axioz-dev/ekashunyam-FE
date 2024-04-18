@@ -1,6 +1,14 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { LogoIcon } from "@/Public/Svg/Svg";
 import { useState } from "react";
+import {
+  motion,
+  useInView,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 const Navbar = () => {
   const [showMenu, setshowMenu] = useState(false);
@@ -8,12 +16,21 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="transition-all">
-        <nav class="fixed w-screen z-20 top-0 start-0 border-btext">
+      <motion.div className="transition-all">
+        <motion.nav
+          initial={{ top: -100 }}
+          animate={{ top: 0 }}
+          transition={{ duration: 3, ease: "anticipate" }}
+          class="fixed w-screen z-20 top-0 start-0 border-btext "
+        >
           {/* <nav class="fixed w-screen z-20 top-0 start-0 border-btext shadow-xl backdrop-blur-xl border-[0.8]"> */}
           <div class="flex flex-wrap items-center justify-between mx-auto xl:mx-0 p-4 text-white ">
-            <div className="flex items-center space-x-3 rtl:space-x-reverse border ml-10 px-3 ">
-              LOGO
+            <div className="flex items-center space-x-3 rtl:space-x-reverse border ml-10 h-10 w-10 ">
+              <img
+                src="./Public/Images/Home/IT Club Logo.jpg"
+                alt=""
+                className="h-10 w-10 object-cover object-center"
+                />
             </div>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
               <button
@@ -109,8 +126,8 @@ const Navbar = () => {
               </Link>
             </div>
           )}
-        </nav>
-      </div>
+        </motion.nav>
+      </motion.div>
     </>
   );
 };

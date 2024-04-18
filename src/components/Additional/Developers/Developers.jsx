@@ -21,8 +21,8 @@ const Developers = () => {
 
   return (
     // <motion.div className="bg-image dark-overlay bg-center bg-cover bg-no-repeat bg-[url('/src/Public/11.jpg')] h-[75vh] ">
-    <motion.div className=" bg-center bg-cover bg-no-repeat bg-black sm:h-screen md:h-auto">
-      <div className="flex justify-center items-center gap-4   ">
+    <motion.div className=" bg-center bg-cover bg-no-repeat bg-black sm:h-screen md:h-auto border-b-4 border-blue-400 py-16">
+      <div className="flex justify-center items-center gap-4 ">
         <motion.h1
           className="text-center pt-10 pb-10  font-megatron text-6xl text-white  "
           style={{ opacity }}
@@ -43,14 +43,22 @@ const Developers = () => {
         className="flex flex-col gap-14 justify-center items-center md:flex-row md:gap-28  md:pb-4"
         ref={ref}
       >
-        <motion.div style={{ opacity }} className=" ">
-          <motion.div className="h-40 w-40 bg-blue-400 rounded-full  md:h-44 md:w-44 " ></motion.div>
-          <h3 className="text-white mt-4 font-gilroy-light text-center md:text-2xl">
+        <motion.div className=" ">
+          <motion.div
+            style={{ opacity }}
+            transition={{ duration: 1 }}
+            className="h-40 w-40 bg-blue-400 rounded-full  md:h-44 md:w-44 "
+          ></motion.div>
+          <motion.h3 className="text-white mt-4 font-gilroy-light text-center md:text-2xl">
             Shainil P.S
-          </h3>
-          <h3 className="text-white mt-0 font-gilroy-light text-center">
+          </motion.h3>
+          <motion.h3
+            style={{ opacity }}
+            transition={{ duration: 0 }}
+            className="text-white mt-0 font-gilroy-light text-center"
+          >
             II BCA
-          </h3>
+          </motion.h3>
         </motion.div>
 
         <div className="mb-10 md:m-0 ">
@@ -64,9 +72,13 @@ const Developers = () => {
           <h3 className="text-white mt-4 font-gilroy-light text-center md:text-2xl">
             Swasthik K
           </h3>
-          <h3 className="text-white mt-0 font-gilroy-light text-center">
+          <motion.h3
+            style={{ opacity }}
+            transition={{ duration: 0 }}
+            className="text-white mt-0 font-gilroy-light text-center"
+          >
             II BCA
-          </h3>
+          </motion.h3>
         </div>
       </section>
     </motion.div>
