@@ -17,7 +17,7 @@ import Login from "./Pages/Login";
 import GlobalError from "./Pages/GlobalError";
 import Registration from "./Pages/FestRegistration";
 
-axios.defaults.baseURL = "http://localhost:8080";
+axios.defaults.baseURL = "https://ekashunyam-be.onrender.com/";
 axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter(
