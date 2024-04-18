@@ -21,7 +21,7 @@ function useSubmit() {
 
             if (response.data.success) {
                 toast.success("Form submitted successfully")
-                navigate('/')
+                navigate('/register')
             } else {
                 toast.error("Error in submitting the form");
                 console.log(response.data.message);

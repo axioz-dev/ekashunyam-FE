@@ -2,13 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { LogoIcon } from "@/Public/Svg/Svg";
 import { useState } from "react";
-import {
-  motion,
-  useInView,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [showMenu, setshowMenu] = useState(false);
@@ -30,7 +24,7 @@ const Navbar = () => {
                 src="./Public/Images/Home/IT Club Logo.jpg"
                 alt=""
                 className="h-10 w-10 object-cover object-center"
-                />
+              />
             </div>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
               <button
@@ -50,17 +44,16 @@ const Navbar = () => {
                 }}
               >
                 <svg
-                  class="w-5 h-5"
+                  className="w-5 h-5"
                   aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 17 14"
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M1 1h15M1 7h15M1 13h15"
                   />
                 </svg>

@@ -41,25 +41,31 @@
 
 // export default Home;
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import Marquee from "@/components/Additional/Marquee/Marquee";
 import Brochure from "@/components/Additional/Brochure/Brochure";
 import Footer from "@/components/Additional/Footer/Footer";
-// import ImgRender from "@/components/Additional/ImageRender/ImageRender";
+import ImgRender from "@/components/Additional/ImageRender/ImageRender";
 import Glass from "@/components/Additional/Glassmorphism/Glass";
 import Developers from "@/components/Additional/Developers/Developers";
 import Landing from "@/components/Additional/Landing/Landing";
 import Navbar from "@/components/Additional/Navbar/Navbar";
 import HorizontalScroll from "@/components/HorizontalScroll/HorizontalScroll";
 // import MyComponent from "@/components/Additional/Parralax/MyComponent";
-
+// import locomotiveScroll from "locomotive-scroll";
 const Home = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setloading] = useState(true);
   const navigate = useNavigate();
-
-  //-------------- if needed to check authentication---------------------
+  // const scrollRef = useRef();
+  // useEffect(() => {
+  //   const scroll = new locomotiveScroll({
+  //     el: scrollRef.current,
+  //     smooth: true,
+  //   });
+  // });
+  // //-------------- if needed to check authentication---------------------
 
   // useEffect(() => {
   //   const checkAuthentication = async () => {
@@ -86,7 +92,13 @@ const Home = () => {
   // }, []);
 
   return (
-    <div className="overflow-hidden">
+    <div
+      // ref={scrollRef}
+      // data-scroll-container
+      // data-scroll-speed="3"
+      // data-scroll-position="top"
+      className="overflow-hidden"
+    >
       {/* <MyComponent /> */}
       {/* <div className="bg-blue-500 w-screen h-screen"></div>  */}
       <Navbar></Navbar>
@@ -103,7 +115,7 @@ const Home = () => {
         )} */}
 
       {/* --------------------------------- ------------------------*/}
-      {/* <ImgRender /> */}
+      <ImgRender />
 
       <Glass />
       <HorizontalScroll />

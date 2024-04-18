@@ -45,8 +45,9 @@
 
 .myhead {
   background-image: url(https://e0.pxfuel.com/wallpapers/380/790/desktop-wallpaper-golden-gold-colour.jpg);
-  background-size: contain;
+  background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  /* position: relative; */
 }
