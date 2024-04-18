@@ -51,6 +51,7 @@ import Glass from "@/components/Additional/Glassmorphism/Glass";
 import Developers from "@/components/Additional/Developers/Developers";
 import Landing from "@/components/Additional/Landing/Landing";
 import Navbar from "@/components/Additional/Navbar/Navbar";
+import HorizontalScroll from "@/components/HorizontalScroll/HorizontalScroll";
 // import MyComponent from "@/components/Additional/Parralax/MyComponent";
 
 const Home = () => {
@@ -105,6 +106,7 @@ const Home = () => {
       {/* <ImgRender /> */}
 
       <Glass />
+      <HorizontalScroll />
       <Brochure />
       {/* <Marquee /> */}
       <Developers />
