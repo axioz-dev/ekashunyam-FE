@@ -11,8 +11,8 @@ const Login = React.lazy(() => import("./Pages/Login"));
 const GlobalError = React.lazy(() => import("./Pages/GlobalError"));
 const Registration = React.lazy(() => import("./Pages/FestRegistration"));
 
-// axios.defaults.baseURL = "https://ekashunyam-be.onrender.com/";
-axios.defaults.baseURL = "http://localhost:8080/";
+axios.defaults.baseURL = "https://ekashunyam-be.onrender.com/";
+// axios.defaults.baseURL = "http://localhost:8080/";
 axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter(
