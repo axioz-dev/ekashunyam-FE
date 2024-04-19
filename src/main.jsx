@@ -1,23 +1,18 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import axios from "axios";
 import { Toaster, ToastBar } from "react-hot-toast";
-import Rules from "../src/Pages/Rules";
+import { RouterProvider, Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 
-import {
-  RouterProvider,
-  Route,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from "react-router-dom";
+const Rules = React.lazy(() => import("../src/Pages/Rules"));
+const Home = React.lazy(() => import("./Pages/Home"));
+const Login = React.lazy(() => import("./Pages/Login"));
+const GlobalError = React.lazy(() => import("./Pages/GlobalError"));
+const Registration = React.lazy(() => import("./Pages/FestRegistration"));
 
-import Home from "./Pages/Home";
-import Login from "./Pages/Login";
-import GlobalError from "./Pages/GlobalError";
-import Registration from "./Pages/FestRegistration";
-
-axios.defaults.baseURL = "https://ekashunyam-be.onrender.com/";
+// axios.defaults.baseURL = "https://ekashunyam-be.onrender.com/";
+axios.defaults.baseURL = "http://localhost:8080/";
 axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter(
@@ -35,7 +30,7 @@ const router = createBrowserRouter(
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <>
+  <Suspense fallback={<div className="text-white">Loading...</div>}>
     <RouterProvider router={router} />
     <Toaster
       renderToast={(t) => (
@@ -67,5 +62,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       }}
       gutter={10} // Space between toast notifications
     />
-  </>
+  </Suspense>
 );

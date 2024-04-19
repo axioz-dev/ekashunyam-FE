@@ -8,7 +8,6 @@ import Loader from "@/components/Loader/Loader";
 const Registration = () => {
   const navigate = useNavigate();
   const [authenticated, setAuthenticated] = useState(false);
-  const [isregistered, setisregistered] = useState(false);
   const [regdata, setregdata] = useState({
     count: 0,
     college: "",
@@ -32,8 +31,6 @@ const Registration = () => {
             college: response.data.data.collegeName,
             email: response.data.data.email,
           }));
-
-          setisregistered(response.data.isregistered);
         }
       } catch (error) {
         toast.error("Please Signup/Login to continue");
@@ -53,7 +50,7 @@ const Registration = () => {
           <Loader />
         </div>
       ) : authenticated ? (
-        <Form isregisterd={isregistered} regdata={regdata} />
+        <Form regdata={regdata} />
       ) : (
         navigate("/login")
       )}

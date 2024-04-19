@@ -17,11 +17,11 @@ import img8 from "/Horizontal/img2.jpg";
 
 function HorizontalScroll() {
   const location = useLocation();
-  useEffect(() => {
-    if (location.state && location.state.scrollPosition) {
-      window.scrollTo(0, location.state.scrollPosition);
-    }
-  }, [location.state]);
+  // useEffect(() => {
+  //   if (location.state && location.state.scrollPosition) {
+  //     window.scrollTo(0, location.state.scrollPosition);
+  //   }
+  // }, [location.state]);
 
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
