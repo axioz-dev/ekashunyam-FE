@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import call from "/Horizontal/image.png";
-import exit from "/Horizontal/close-button.png";
+import call from "/Public/Images/Horizontal/image.png";
+import exit from "/Public/Images/Horizontal/close-button.png";
 
 function Rules() {
   const navigate = useNavigate();
