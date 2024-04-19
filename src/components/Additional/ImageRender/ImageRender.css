@@ -1,7 +1,4 @@
-
-/* css of Imagerender component */
-
-#main {
+/* #main {
     width: 100%;
     min-height: 100vh;
   }
@@ -72,7 +69,6 @@
     position: absolute;
     bottom: 0%;
     padding: 1.5vw 3vw;
-    /* background-color: #8b2f2f; */
     font-size: 0.8vw;
     border: none;
     border-radius: 50px;
@@ -81,9 +77,7 @@
   
   #demo:hover {
     color: white;
-    cursor: pointer;
     border: 1px solid white;
     background-color: #000000;
   }
-  
-  /* ...................................... */
+   */
