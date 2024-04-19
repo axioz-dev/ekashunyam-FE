@@ -4,7 +4,7 @@ import useSubmit from "@/Hooks/useSubmit";
 import Loader from "../Loader/Loader";
 import BentoBox from "../Additional/BentoBox/BentoBox";
 
-const Form = ({ isregisterd, regdata }) => {
+const Form = ({ regdata }) => {
   const { loading, formverify } = useSubmit();
 
   //State Variable
@@ -113,7 +113,7 @@ const Form = ({ isregisterd, regdata }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await formverify(formFields, setFormFields);
+    await formverify(formFields);
   };
 
   //return logic
@@ -125,9 +125,8 @@ const Form = ({ isregisterd, regdata }) => {
         <BentoBox regdata={regdata} />
 
         <div style={{ display: regdata.count == 2 ? "none" : "block" }}>
-          <form onSubmit={handleSubmit} className="">
-            <div className="bg-inherit bg-contain bg-[url('/src/Public/Images/Dashboard_Page/1.jpg')] py-8 rounded-bl-3xl">
-              {/* <div className="py-8 rounded-bl-3xl"> */}
+          <form onSubmit={handleSubmit} >
+            <div className="bg-inherit bg-contain bg-[url('/Public/Images/Register/1.webp')] py-8 rounded-bl-3xl">
               <h1 className="font-megatron text-white text-5xl text-center mb-0 sm:text-6xl md:mb-3">
                 Registration
               </h1>

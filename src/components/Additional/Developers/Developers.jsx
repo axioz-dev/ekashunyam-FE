@@ -13,12 +13,10 @@ const Developers = () => {
     offset: ["center end", "end center "],
   });
 
-  // const scale = useTransform(scrollYProgress, [0, 1], [1.6, 0.56]);
   const opacity = useTransform(scrollYProgress, [0, 0.8, 1], [0, 1, 1]);
   const left = useTransform(scrollYProgress, [0, 1], [300, 0]);
 
   return (
-    // <motion.div className="bg-image dark-overlay bg-center bg-cover bg-no-repeat bg-[url('/src/Public/11.jpg')] h-[75vh] ">
     <motion.div className=" bg-center bg-cover bg-no-repeat bg-black sm:h-screen md:h-auto border-b-4 border-blue-400 py-16">
       <div className="flex justify-center items-center gap-4 ">
         <motion.h1

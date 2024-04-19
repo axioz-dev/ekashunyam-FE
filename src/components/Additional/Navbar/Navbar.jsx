@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { LogoIcon } from "@/Public/Svg/Svg";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -21,8 +20,8 @@ const Navbar = () => {
           <div className="flex flex-wrap items-center justify-between mx-auto xl:mx-0 p-4 text-white ">
             <div className="flex items-center space-x-3 rtl:space-x-reverse border ml-10 h-10 w-10 ">
               <img
-                src="./Public/Images/Home/IT Club Logo.jpg"
-                alt=""
+                src="/Images/Home/IT_Club_Logo.jpg"
+                alt="IT Club Logo"
                 className="h-10 w-10 object-cover object-center"
               />
             </div>
@@ -114,7 +113,7 @@ const Navbar = () => {
               >
                 <p className=" font-megatron -tracking-[-2px] ">About</p>
               </Link>
-              <Link className="hover:text-yellow-400 transition-all duration-300">
+              <Link className="hover:text-yellow-400 transition-all duration-300" to={"/#contact"}>
                 <p className=" font-megatron -tracking-[-2px] ">Contact</p>
               </Link>
             </div>

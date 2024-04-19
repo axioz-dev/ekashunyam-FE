@@ -7,7 +7,7 @@ function useSubmit() {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate()
 
-    const formverify = async (formFields, setFormFields) => {
+    const formverify = async (formFields) => {
         const pass = errhandle(formFields);
         setLoading(true);
 
@@ -25,14 +25,6 @@ function useSubmit() {
             });
             console.log("Success: " + response.data.message);
             window.location.reload();
-
-            // if (response.data.success) {
-            //     toast.success("Form submitted successfully")
-            //     navigate('/register')
-            // } else {
-            //     toast.error(error.response.data.message);
-            //     console.log(response.data.message);
-            // }
         } catch (error) {
             if (error.response && error.response.status >= 500) {
                 console.log('Something went wrong!');

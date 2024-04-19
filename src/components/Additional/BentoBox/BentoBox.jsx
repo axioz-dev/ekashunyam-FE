@@ -1,8 +1,24 @@
 import React from "react";
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const BentoBox = ({ regdata }) => {
   const navigate = useNavigate();
+
+  const logout = async () => {
+    try {
+      const response = await axios.post("/api/user/logout");
+      if (response.status === 200) {
+        toast.success("Logged out successfully");
+        navigate("/login");
+      }
+    } catch (error) {
+      toast.error("Error in logging out");
+      console.error("Error in logging out:", error);
+    }
+  };
+
   return (
     <>
       <section className="bg-bottom bg-black">
@@ -19,8 +35,9 @@ const BentoBox = ({ regdata }) => {
           <div className="mx-auto px-6 max-w-6xl xl:max-w-full xl:px-16 text-gray-500">
             <div className="relative">
               <div className="relative z-10 grid gap-8 grid-cols-6 group">
-                {/* <div className="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-[28px] bg-white    bg-opacity-10  border-white border-opacity-20 backdrop-blur-5  shadow-glass border-solid bg-gradient-to-br from-black to-purple-900  border-4"> */}
-                <div className="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-[28px] bg-whit bg-opacity-10  border-white border-opacity-20 backdrop-blur-5  shadow-glass border-solid    bg-cover bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-2.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
+                {/* <div className="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-[28px] bg-whit bg-opacity-10  border-white border-opacity-20 backdrop-blur-5  shadow-glass border-solid cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500"> */}
+                <div className="col-span-full lg:col-span-2 overflow-hidden flex relative p-8 rounded-[28px] bg-whit bg-opacity-10  border-white border-opacity-20 backdrop-blur-5  shadow-glass border-solid    bg-cover bg-[url('/Public/Images/Register/gradients/gradient-2.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
+
                   <div className="size-fit m-auto relative ">
                     <div className="relative h-24 w-56 flex items-center  mx-auto font-megatron">
                       <span className="w-fit block mx-auto text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-300 to-pink-600">
@@ -37,7 +54,7 @@ const BentoBox = ({ regdata }) => {
                   </div>
                 </div>
 
-                <div className="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-8  bg-white rounded-[28px] bg-center bg-cover bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-1.webp')]  bg-opacity-50 cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105  duration-500">
+                <div className="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-8  bg-white rounded-[28px] bg-center bg-cover bg-[url('/Public/Images/Register/gradients/gradient-1.webp')]  bg-opacity-50 cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105  duration-500">
                   <div>
                     <div className="relative aspect-square rounded-full size-32 flex border mx-auto before:absolute before:-inset-2 before:border before:rounded-full bg-center bg-cover bg-[url('/src/Public/5.png ')] "></div>
                     <div className="mt-6 text-center relative z-10 flex justify-center items-center flex-col gap-4">
@@ -51,7 +68,7 @@ const BentoBox = ({ regdata }) => {
                   </div>
                 </div>
 
-                <div className="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-8 rounded-xl bg-white  border-gray-200 bg-center bg-cover bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-2.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
+                <div className="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-8 rounded-xl bg-white  border-gray-200 bg-center bg-cover bg-[url('/Public/Images/Register/gradients/gradient-2.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
                   <div className="flex flex-col gap-4 justify-center items-center h-full">
                     <div className="pt-6 lg:px-6 font-gilroy-light ">
                       Note that You can create 2 teams at max.
@@ -64,19 +81,10 @@ const BentoBox = ({ regdata }) => {
                         You have regsitered {regdata.count} team
                       </p>
                     </div>
-                    {/* <div className="mt-14 text-center relative z-10 space-y-2">
-                      <p className="dark:text-gray-300 text-gray-700">
-                        Provident fugit vero voluptate. magnam magni doloribus
-                        dolores voluptates inventore nisi.
-                      </p>
-                      <h2 className="text-3xl font-medium text-gray-800 transition  font-megatron">
-                        Lorem, ipsum.
-                      </h2>
-                    </div> */}
                   </div>
                 </div>
 
-                <div className="col-span-full lg:col-span-3 overflow-hidden relative p-8 rounded-xl bg-white  border-gray-200 bg-cover bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-5.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
+                <div className="col-span-full lg:col-span-3 overflow-hidden relative p-8 rounded-xl bg-white  border-gray-200 bg-cover bg-[url('/Public/Images/Register/gradients/gradient-5.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
                   <div className="flex flex-col justify-center items-center gap-4  h-full">
                     <div>
                       <h2 className="text-5xl font-medium transition  text-center text-white font-megatron">
@@ -97,7 +105,7 @@ const BentoBox = ({ regdata }) => {
                   </div>
                 </div>
 
-                <div className="col-span-full lg:col-span-3 overflow-hidden relative p-8 rounded-xl bg-white bg-[url('/src/Public/Images/Dashboard_Page/gradients/gradient-7.webp')] bg-cover cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
+                <div className="col-span-full lg:col-span-3 overflow-hidden relative p-8 rounded-xl bg-white bg-[url('/Public/Images/Register/gradients/gradient-7.webp')] bg-cover cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
                   <div className="flex flex-col justify-center items-center gap-8  h-full">
                     <div>
                       <h2 className="text-5xl font-medium transition  text-center text-white font-megatron">
@@ -108,7 +116,7 @@ const BentoBox = ({ regdata }) => {
                       </p>
                     </div>
                     <button
-                      onClick={() => navigate("/")}
+                      onClick={logout}
                       type="button"
                       className="bg-white  py-2  md:px-8 text-xm  px-3 font-megatron rounded-md animate-shimmer border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium  text-yellow-100 transition-colors hover:outline-none hover:ring-1 hover:ring-yellow-400 hover:ring-offset-1 hover:ring-offset-yellow-50 "
                     >

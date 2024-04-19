@@ -8,9 +8,9 @@ import { fadeIn } from "@/utils/variants";
 const Footer = () => {
   return (
     <>
-      {/* <div className="w-screen h-full md:h-full bg-black footer opacity-100 p-8 flex flex-col gap-4 sm:px-32 items-center bg-[url('/src/Public/Images/collections/4.jpg')] bg-top bg-cover"> */}
       <motion.div
-        variants={fadeIn("right", 0.4)}
+        id="contact"
+        variants={fadeIn("up", 0.4)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.2 }}

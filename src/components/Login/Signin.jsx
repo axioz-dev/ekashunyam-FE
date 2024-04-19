@@ -1,7 +1,7 @@
 import React from "react";
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import useSignin from "@/Hooks/useSignin";
-import Signup from "./Signup";
+const Signup = lazy(() => import("./Signup"));
 import Loader from "../Loader/Loader";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/variants";
@@ -32,7 +32,8 @@ const Signin = () => {
             className="bg-black w-screen flex lg:justify-center lg:items-center lg:h-screen"
           >
             <div className="flex flex-col lg:flex-row lg:items-center xl:w-3/4 lg:w-[90vw] lg:h-3/4 lg:rounded-xl w-screen ">
-              <div className="bg-gray-500 h-80 bg-bottom bg-cover bg-[url('/src/Public/Images/Login_Page/1.jpeg')] lg:h-full lg:w-3/4 lg:rounded-xl animate-pulse duration-[4000]"></div>
+              <div className="bg-gray-500 h-80 bg-bottom bg-cover bg-[url('/Public/Images/Login/1.webp')] lg:h-full lg:w-3/4 lg:rounded-xl animate-pulse duration-[4000]"></div>
+              {/* D:\ekashunyam_final\ekashunyam-FE\Public\Images\Login\1.webp */}
               <div className="px-16 py-14 lg:h-screen lg:w-full lg:pt-48 sm:text-center">
                 <h1 className="sm:text-3xl text-[4.99vw] text-yellow-500 font-megatron ">
                   Back again ? log in now !
@@ -111,7 +112,9 @@ const Signin = () => {
           </motion.div>
         </>
       ) : (
-        <Signup />
+        <Suspense fallback={<Loader />}>
+          <Signup />
+        </Suspense>
       )}
     </>
   );
