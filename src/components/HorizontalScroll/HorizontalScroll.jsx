@@ -6,14 +6,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Card from "./Card.jsx";
 
 //importing images
-import img1 from "/Horizontal/img14.jpg";
-import img2 from "/Horizontal/img13.jpg";
-import img3 from "/Horizontal/img11.jpg";
-import img4 from "/Horizontal/img12.jpg";
-import img5 from "/Horizontal/img1.png";
-import img6 from "/Horizontal/img6.jpg";
-import img7 from "/Horizontal/img10.jpg";
-import img8 from "/Horizontal/img2.jpg";
+import img1 from "/Public/Horizontal/img14.jpg";
+import img2 from "/Public/Horizontal/img13.jpg";
+import img3 from "/Public/Horizontal/img11.jpg";
+import img4 from "/Public/Horizontal/img12.jpg";
+import img5 from "/Public/Horizontal/img1.png";
+import img6 from "/Public/Horizontal/img6.jpg";
+import img7 from "/Public/Horizontal/img10.jpg";
+import img8 from "/Public/Horizontal/img2.jpg";
 
 function HorizontalScroll() {
   const location = useLocation();
