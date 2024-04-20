@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import call from "/Horizontal/image.png";
-import exit from "/Horizontal/close-button.png";
+import call from "/Public/Horizontal/image.png";
+import exit from "/Public/Horizontal/close-button.png";
 
 function Rules() {
   const navigate = useNavigate();
@@ -179,11 +179,11 @@ function Rules() {
   );
   return (
     <div
-      className="flex justify-center items-center h-screen bg-cover lg:bg-top    bg-center p-6"
+      className="flex justify-center items-center h-screen bg-cover lg:bg-top bg-center p-6"
       style={{ backgroundImage: "url('/Horizontal/primeBg2.png')" }}
       //bg-[url('/Horizontal/img1.png')]
     >
-      <div className="bg-opacity-30  backdrop-blur-md  rounded-lg p-4 lg:p-10 shadow-2xl bg-white  hover:bg-opacity-40 transition duration-300 ease-in transform  border hover:border-yellow-400 relative">
+      <div className="bg-opacity-30  backdrop-blur-md  rounded-xl p-4 lg:p-10 shadow-2xl bg-white hover:bg-opacity-40 transition duration-300 ease-in transform border hover:border-yellow-400 relative">
         <h1 className="lg:text-5xl text-3xl text-center mb-2 font-extrabold ">
           {eventName}
         </h1>
@@ -231,7 +231,8 @@ function Rules() {
           )}
           <button
             className="absolute lg:top-2 lg:right-6 lg:p-8 top-2 right-2 p-2"
-            onClick={() => navigate("/", { state: { scrollPosition } })}
+            // onClick={() => navigate("/", { state: { scrollPosition } })}
+            onClick={() => navigate("/")}
           >
             <img
               className="lg:w-12 w-6  hover:scale-110 hover:rotate-2 transition-all duration-300 ease-in"

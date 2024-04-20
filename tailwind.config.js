@@ -21,7 +21,6 @@ module.exports = {
         'megatron':['Megatron-rAo9'],
         'gilroy':['Gilroy-ExtraBold'],
         'gilroy-light':['Gilroy-Light'],
-        'gilroy-scie':['SciFi Movies'],
       },
       colors: {
         border: "hsl(var(--border))",

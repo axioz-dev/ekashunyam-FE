@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { fadeIn } from "@/utils/variants";
 import { motion } from "framer-motion";
+
 const GlobalError = () => {
   const navigate = useNavigate();
   return (
@@ -13,7 +14,7 @@ const GlobalError = () => {
         viewport={{ once: false, amount: 0.2 }}
         className="flex  items-center w-screen h-scree flex-col gap-8 sm:mt-0"
       >
-        <div className="bg-center bg-cover bg-[url('./Public/Images/Error/1.jpg')] w-full h-96"></div>
+        <div className="bg-center bg-cover bg-[url('/Public/Images/Error/1.webp')] w-full h-96"></div>
 
         <div className="flex justify-center items-center flex-col gap-4 mt-4">
           <p className="text-white font-megatron text-xl xl:text-3xl">
