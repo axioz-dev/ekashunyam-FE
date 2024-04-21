@@ -161,7 +161,7 @@ function Rules() {
       console.log("No event found with ID:", eventId);
       navigate("/");
     }
-  }, [eventId]);
+  }, [eventId, navigate]);
 
   const {
     id,
