@@ -17,11 +17,11 @@ import img8 from "/Public/Horizontal/img2.jpg";
 
 function HorizontalScroll() {
   const location = useLocation();
-  // useEffect(() => {
-  //   if (location.state && location.state.scrollPosition) {
-  //     window.scrollTo(0, location.state.scrollPosition);
-  //   }
-  // }, [location.state]);
+  useEffect(() => {
+    if (location.state && location.state.scrollPosition) {
+      window.scrollTo(0, location.state.scrollPosition);
+    }
+  }, [location.state]);
 
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
@@ -54,11 +54,11 @@ function HorizontalScroll() {
 
   return (
     <>
-      <div className="overflow-hidden h-screen" id="scroll-wrapper" >
-        <div className=" text-7xl text-center pt-8 pb-20 text-white font-megatron"> EVENTS</div>
+      <div className="overflow-hidden h-screen bg-[url('/Public/3.jpg')] bg-cover bg-center" id="scroll-wrapper" >
+        <div className=" text-6xl text-center pt-8 pb-20 text-white font-megatron">EVENTS</div>
 
         <div
-          className="px-32 flex flex-nowrap gap-28  "
+          className="px-32 flex flex-nowrap gap-28 capitalize"
           id="scroll-div"
           ref={container}
         >

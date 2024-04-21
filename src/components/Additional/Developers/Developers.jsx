@@ -1,81 +1,82 @@
-import React, { useEffect, useRef } from "react";
-import { CodeBracketIcon } from "@heroicons/react/24/solid";
-import {
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
+import { fadeIn } from "@/utils/variants";
 
 const Developers = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["center end", "end center "],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.8, 1], [0, 1, 1]);
-  const left = useTransform(scrollYProgress, [0, 1], [300, 0]);
+  const navigate = useNavigate();
 
   return (
-    <motion.div className=" bg-center bg-cover bg-no-repeat bg-black sm:h-screen md:h-auto border-b-4 border-blue-400 py-16">
+    <motion.div
+      variants={fadeIn("down", 0.2, 2)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.5 }}
+      className="bg-center bg-cover bg-no-repeat bg-black md:h-auto  py-6 "
+    >
       <div className="flex justify-center items-center gap-4 ">
-        <motion.h1
-          className="text-center pt-10 pb-10  font-megatron text-6xl text-white  "
-          style={{ opacity }}
-          transition={{ duration: 4.5 }}
-        >
-          Developers
-        </motion.h1>
-        <motion.h1
-          className="text-center  font-megatron text-6xl"
-          style={{ opacity }}
-          transition={{ duration: 4.5 }}
-        >
-          <CodeBracketIcon className="h-10 w-10 text-blue-400 " />
-        </motion.h1>
+        <h1 className="text-center pt-10 pb-10  font-megatron text-3xl text-white  md:text-7xl">
+          CONTACT US !
+        </h1>
       </div>
 
-      <section
-        className="flex flex-col gap-14 justify-center items-center md:flex-row md:gap-28  md:pb-4"
-        ref={ref}
-      >
-        <motion.div className=" ">
-          <motion.div
-            style={{ opacity }}
-            transition={{ duration: 1 }}
-            className="h-40 w-40 bg-blue-400 rounded-full  md:h-44 md:w-44 "
-          ></motion.div>
-          <motion.h3 className="text-white mt-4 font-gilroy-light text-center md:text-2xl">
+      <section className="flex flex-col gap-14 justify-center items-center px-4 md:gap-28  md:pb-4  h-full">
+        <div className="border px-8 py-2 rounded-[8px]">
+          <h3 className="text-white  font-gilroy-light text-center md:text-2xl font-bold">
             Shainil P.S
-          </motion.h3>
-          <motion.h3
-            style={{ opacity }}
-            transition={{ duration: 0 }}
-            className="text-white mt-0 font-gilroy-light text-center"
-          >
+          </h3>
+          <h3 className="text-white mt-0 font-gilroy-light text-center">
             II BCA
-          </motion.h3>
-        </motion.div>
+          </h3>
+          <h3 className="text-white mt-0 font-gilroy-light text-center">
+            Email : shainilps.work@gmail.com
+          </h3>
+          <h3 className="text-white mt-0 font-gilroy-light text-center">
+            Phone : 9632348984
+          </h3>
+          <h3 className="text-white mt-0 font-gilroy-light text-center">
+            Know us :
+            <Link
+              to="https://codeshaine.github.io/codeshaine.socials/"
+              target="_blank"
+              className="text-yellow-100 hover:text-yellow-200 ml-2"
+            >
+              https://codeshaine.io
+            </Link>
+          </h3>
+        </div>
 
-        <div className="mb-10 md:m-0 ">
-          <motion.div
-            style={{ opacity }}
-            transition={{ duration: 1.5 }}
-            // ref={ref}
-            // style={{ scale, opacity, left }}
-            className="h-40 w-40 bg-yellow-400 relative rounded-full  md:h-44 md:w-44 "
-          ></motion.div>
-          <h3 className="text-white mt-4 font-gilroy-light text-center md:text-2xl">
+        <div className="border px-8 py-2 rounded-[8px]">
+          <h3 className="text-white  font-gilroy-light text-center md:text-2xl font-bold">
             Swasthik K
           </h3>
-          <motion.h3
-            style={{ opacity }}
-            transition={{ duration: 0 }}
-            className="text-white mt-0 font-gilroy-light text-center"
-          >
+          <h3 className="text-white mt-0 font-gilroy-light text-center">
             II BCA
-          </motion.h3>
+          </h3>
+          <h3 className="text-white mt-0 font-gilroy-light text-center">
+            Email : swasth319@gmail.com
+          </h3>
+          <h3 className="text-white mt-0 font-gilroy-light text-center">
+            Phone : 8123837856
+          </h3>
+          <h3 className="text-white mt-0 font-gilroy-light text-center">
+            Know us :
+            <Link
+              to="https://linktr.ee/swasthk"
+              target="_blank"
+              className="text-yellow-100 hover:text-yellow-200 ml-2"
+            >
+              https://linktr.ee/swasthk
+            </Link>
+          </h3>
         </div>
+        <button
+          onClick={() => navigate("/")}
+          type="button"
+          className="bg-white  py-2 md:mr-8 md:px-8 text-xm  px-3 font-megatron rounded-[5px] animate-shimmer border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium  text-yellow-100 transition-colors hover:outline-none hover:ring-1 hover:ring-yellow-400 hover:ring-offset-1 hover:ring-offset-yellow-50 "
+        >
+          HOME
+        </button>
       </section>
     </motion.div>
   );
