@@ -25,14 +25,8 @@ const Navbar = ({ scrollRefs }) => {
               onClick={() => {
                 handlehomeclick();
               }}
-              className="flex items-center  rtl:space-x-reverse ml-8 h-10 w-10 hover:cursor-pointer"
-            >
-              <img
-                src="/Images/Home/Logo.webp"
-                alt="logo"
-                className="h-10 w-10 object-cover object-center"
-              />
-            </div>
+              className="flex items-center rtl:space-x-reverse ml-8 h-10 w-10 hover:cursor-pointer bg-bottom bg-cover bg-[url('/Public/Images/Home/Logo.webp')]"
+            ></div>
             <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
               <button
                 onClick={() => navigate("/register")}
