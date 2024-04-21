@@ -2,7 +2,7 @@ import React from "react";
 
 const GeneralRules = () => {
   return (
-    <div className="text-white  px-4 pb-4 py-24">
+    <div className="text-white  px-4 pb-4 py-24 capitalize">
       <div className="flex justify-center items-center flex-col gap-4 xl:mx-80 md:mx-32 lg:24">
         <h1 className="text-3xl text-center py-4 font-megatron sm:text-6xl">
           General Rules
@@ -10,7 +10,7 @@ const GeneralRules = () => {
         <div className="border p-6 rounded-[10px]">
           <ul className="flex flex-col gap-4 font-gilroy-light md:text-2xl ">
             <li>
-              - “EKASHUNYAM” is open to BCA,bsc and BVOC [Software] students.
+              - “EKASHUNYAM” is open to BCA,BSC and BVOC [Software] students.
             </li>
             <li>- A maximum of 16 students are allowed per team.</li>
             <li>- Two teams can participate from each college.</li>

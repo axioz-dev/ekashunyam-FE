@@ -184,12 +184,12 @@ const Form = ({ regdata }) => {
 
                   <div className="mt-8 bg-opacity-20 rounded-lg py-8 flex px-8 justify-evenly flex-col shadow-xl backdrop-blur-3xl border-[0.8]  hover:backdrop-blur-md transition-all duration-500 cursor-pointer">
                     <div className="flex-col justify-between text-black-900 items-center">
-                      <h1 className="font-megatron text-4xl">Cybertron</h1>
+                      <h1 className="font-megatron text-4xl">Prime Expo</h1>
                       <h1 className="text-xl font-semibold font-gilroy">2/8</h1>
                     </div>
                     <div>
                       <h3 className="mt-2 font-gilroy-light text-white">
-                        Coding(2 make a team)
+                        Product launch(Individual)
                       </h3>
                     </div>
                     {formFields.event2.participants.map(
@@ -278,12 +278,12 @@ const Form = ({ regdata }) => {
 
                   <div className="mt-8 bg-opacity-20 rounded-lg py-8 flex px-8 justify-evenly flex-col shadow-xl backdrop-blur-3xl border-[0.8]   hover:backdrop-blur-md transition-all duration-500 ">
                     <div className="flex-col justify-between gap-12 text-black-900 items-center">
-                      <h1 className="font-megatron text-4xl">Prime Expo</h1>
+                      <h1 className="font-megatron text-4xl">Battle Arena</h1>
                       <h1 className="text-xl font-semibold font-gilroy">4/8</h1>
                     </div>
                     <div>
                       <h3 className="mt-2 font-gilroy-light text-white">
-                        Product launch(Individual)
+                        Gaming(2 make a team)
                       </h3>
                     </div>
                     {formFields.event4.participants.map(
@@ -326,14 +326,12 @@ const Form = ({ regdata }) => {
 
                   <div className="mt-8 bg-opacity-20 rounded-lg py-8 flex px-8 justify-evenly flex-col shadow-xl backdrop-blur-3xl border-[0.8]   hover:backdrop-blur-md transition-all duration-500 ">
                     <div className="flex-col justify-between gap-12 text-black-900 items-center">
-                      <h1 className="font-megatron text-4xl">
-                        Battle Arena
-                      </h1>
+                      <h1 className="font-megatron text-4xl">Cybertron</h1>
                       <h1 className="text-xl font-semibold font-gilroy">5/8</h1>
                     </div>
                     <div>
                       <h3 className="mt-2 font-gilroy-light text-white">
-                        Gaming(2 make a team)
+                        Coding(2 make a team)
                       </h3>
                     </div>
                     {formFields.event5.participants.map(

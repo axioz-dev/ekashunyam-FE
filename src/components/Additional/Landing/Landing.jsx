@@ -3,23 +3,7 @@ import "./Landing.css";
 import { fadeIn } from "@/utils/variants";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const Landing = ({ scrollRefs }) => {
-  // const targetRef = useRef(null);
-
-  // const { scrollYProgress } = useScroll({
-  //   target: targetRef,
-  //   offset: ["start start", "end center"],
-  // });
-
-  // const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "90deg"]);
-  // const top = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
-  // const opacity = useTransform(scrollYProgress, [0, 1], ["1", "0"]);
-  // const scale = useTransform(scrollYProgress, [0, 1], ["1", "1.8"]);
-  // const letterSpacing = useTransform(
-  //   scrollYProgress,
-  //   [0, 1],
-  //   ["-0.1rem", "+3.8rem"]
-  // );
+const Landing = ({ scrollRefs },ref) => {
 
   return (
     <div
