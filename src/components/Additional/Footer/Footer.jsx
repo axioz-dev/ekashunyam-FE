@@ -4,8 +4,17 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { InstagramIcon, EmailIcon, PhoneIcon } from "@/Public/Svg/Svg";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/variants";
+import { useState } from "react";
 
 const Footer = ({ scrollRef }) => {
+  const [emailLink, setEmailLink] = useState("");
+
+  const handleEmailClick = () => {
+    const emailAddress = "ekashunyam1.o@gmail.com";
+    const emailComposeLink = `mailto:${emailAddress}`;
+    setEmailLink(emailComposeLink);
+  };
+
   return (
     <>
       <motion.div
@@ -28,29 +37,27 @@ const Footer = ({ scrollRef }) => {
             Icon={InstagramIcon}
             text={"Instagram"}
             link={
-              "https://www.instagram.com/coming_soon_1.o?igsh=MTZlMXJpbWN6M3Zuaw=="
+              "https://www.instagram.com/ekashunyam?igsh=MTZlMXJpbWN6M3Zuaw=="
             }
           />
           <Cards Icon={PhoneIcon} text={"8792489207"} />
           <Cards
             Icon={EmailIcon}
             text={"Email"}
-            link={
-              "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWrRqhsVpWZSTDNgfFWsnlffgbRKHlmnPFqkHKhptVSvRrthXdVbnLKzclfxnFBzctHQrMxLg"
-            }
+            link={emailLink}
+            handleEmailClick={handleEmailClick}
           />
         </div>
 
         <div className="text-white text-center mb-8 ">
           <h6 className="text-sm">© 2024 Ekashunyam.tech</h6>
-          {/* <h2 className="text-xl font-gilroy-light">Lorem, ipsum dolor.</h2> */}
         </div>
       </motion.div>
     </>
   );
 };
 
-function Cards({ Icon, text, link }) {
+function Cards({ Icon, text, link, handleEmailClick }) {
   return (
     <>
       <div className="text-white flex w-full gap-4 p-8 lg:px-14 justify-between mb-6 rounded-xl md:w-full md:gap-8 shadow-sm shadow-yellow-500  bg-gray-800 sm:gap ">
@@ -62,7 +69,7 @@ function Cards({ Icon, text, link }) {
         </div>
         {text === "8792489207" ? null : (
           <div>
-            <Link to={link} target="_blank">
+            <Link to={link} target="_blank" onClick={handleEmailClick}>
               <div className="h-8 w-8">
                 <ArrowTopRightOnSquareIcon className="h-6 w-6 mt-1" />
               </div>

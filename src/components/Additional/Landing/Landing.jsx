@@ -24,7 +24,7 @@ const Landing = ({ scrollRefs }) => {
   return (
     <div
       ref={scrollRefs}
-      className="relative w-screen h-96 sm:h-screen sm: bg-black py-96 bg-center bg-cover bg-no-repeat bg-[url('/Public/Images/Home/land.png')] "
+      className="relative w-screen h-96 sm:h-screen sm: bg-black py-96 bg-center bg-cover bg-no-repeat bg-[url('/Public/Images/Home/landing-1.webp')] "
     >
       {/* <video
         className="absolute left-0 top-0 w-screen h-screen object-cover object-center  animatee-fadeIn"

@@ -54,16 +54,19 @@ function HorizontalScroll() {
 
   return (
     <>
-      <div className="overflow-hidden h-screen bg-[url('/Public/3.jpg')] bg-cover bg-center" id="scroll-wrapper" >
-        <div className=" text-6xl text-center pt-8 pb-20 text-white font-megatron">EVENTS</div>
-
+      <div
+        className="overflow-hidden h-screen  bg-center bg-cover bg-[url('/Public/Images/Home/3.webp')] "
+        id="scroll-wrapper"
+      >
+        <div className=" text-6xl text-center pt-8 pb-20 text-white font-megatron">
+          EVENTS
+        </div>
         <div
           className="px-32 flex flex-nowrap gap-28 capitalize"
           id="scroll-div"
           ref={container}
         >
           <Card
-            
             title={"Auto Bot"}
             subTitle={"Quiz"}
             img={img1}
