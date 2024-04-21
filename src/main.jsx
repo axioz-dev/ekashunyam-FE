@@ -20,8 +20,8 @@ const Developers = React.lazy(() =>
   import("./components/Additional/Developers/Developers")
 );
 
-axios.defaults.baseURL = "https://ekashunyam-be.onrender.com/";
-// axios.defaults.baseURL = "http://localhost:8080/";
+axios.defaults.baseURL = "https://api.ekashunyam.tech/";
+
 axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter(
