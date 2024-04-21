@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Card from "./Card.jsx";
 
@@ -16,12 +15,16 @@ import img7 from "/Public/Horizontal/img10.jpg";
 import img8 from "/Public/Horizontal/img2.jpg";
 
 function HorizontalScroll() {
-  const location = useLocation();
   useEffect(() => {
-    if (location.state && location.state.scrollPosition) {
-      window.scrollTo(0, location.state.scrollPosition);
+    const storedScrollPosition = parseInt(
+      localStorage.getItem("scrollPosition"),
+      10
+    );
+    if (storedScrollPosition) {
+      window.scrollTo(0, storedScrollPosition);
+      localStorage.removeItem("scrollPosition"); // Optional
     }
-  }, [location.state]);
+  }, []);
 
   const container = useRef(null);
   gsap.registerPlugin(ScrollTrigger);

@@ -4,9 +4,7 @@ function Card({ title, subTitle, img, to }) {
   return (
     <>
       <PinContainer
-        containerClassName={
-          "w-80 rounded-xl border-gray-300 capitalize"
-        }
+        containerClassName={"w-80 rounded-xl border-gray-300 capitalize"}
         className={"w-80 px-2 pb-2 "}
         to={to}
       >
@@ -14,7 +12,7 @@ function Card({ title, subTitle, img, to }) {
           {title}
         </h1>
         <p className="text-xl  text-center pb-4 opacity-85 font-gilroy-light">
-          {subTitle}{" "}
+          {subTitle}
         </p>
 
         <img
@@ -22,7 +20,6 @@ function Card({ title, subTitle, img, to }) {
           src={img}
         ></img>
       </PinContainer>
-      {/* bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 */}
     </>
   );
 }

@@ -147,19 +147,8 @@ function Rules() {
 
     if (filteredObject) {
       setEventDetails(filteredObject);
-      console.log(
-        id,
-        eventName,
-        subName,
-        rules,
-        coOrdinator1,
-        contact1,
-        coOrdinator2,
-        contact2
-      );
     } else {
-      console.log("No event found with ID:", eventId);
-      navigate("/");
+      navigate("*");
     }
   }, [eventId, navigate]);
 
@@ -174,9 +163,12 @@ function Rules() {
     contact2,
   } = eventDetails;
 
-  const [scrollPosition, setScrollPostiton] = useState(
-    document.documentElement.scrollTop
-  );
+  const handleNavigate = () => {
+    const scrollPosition = 3000;
+    localStorage.setItem("scrollPosition", scrollPosition);
+
+    navigate("/", { replace: true });
+  };
   return (
     <div
       className="flex justify-center items-center h-screen bg-cover lg:bg-top bg-center p-6 capitalize"
@@ -230,8 +222,8 @@ function Rules() {
           )}
           <button
             className="absolute lg:top-2 lg:right-6 lg:p-8 top-2 right-2 p-2"
-            // onClick={() => navigate("/", { state: { scrollPosition } })}
-            onClick={() => navigate("/")}
+            onClick={handleNavigate}
+            // onClick={() => navigate("/")}
           >
             <img
               className="lg:w-12 w-6  hover:scale-110 hover:rotate-2 transition-all duration-300 ease-in"
