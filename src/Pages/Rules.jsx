@@ -107,7 +107,7 @@ function Rules() {
         coOrdinator1: "Nishitha A Shetty",
         contact1: "7625096336",
         coOrdinator2: "K Kiran ",
-        contact2: "9901660872",
+        contact2: "8277463806",
       },
       {
         id: "battle-arena",
