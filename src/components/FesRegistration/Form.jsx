@@ -283,7 +283,7 @@ const Form = ({ regdata }) => {
                     </div>
                     <div>
                       <h3 className="mt-2 font-gilroy-light text-white">
-                        Gaming(2 make a team)
+                        Gaming-BGMI(2 make a team)
                       </h3>
                     </div>
                     {formFields.event4.participants.map(

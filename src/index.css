@@ -46,11 +46,6 @@ html {
   display: none;
 }
 
-/* Optional: If you want to hide the scrollbar only for specific elements */
-.scroll-container::-webkit-scrollbar {
-  display: none;
-}
-
 /* darkness for image */
 .bg-image {
   position: relative;

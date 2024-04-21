@@ -24,7 +24,7 @@ const Brochure = () => {
           </div>
           <div>
             <Link
-              to="https://drive.google.com/file/d/14lphYB1BGWikGaRzTKxuFPfXr8RWBcjc/view?usp=drivesdk"
+              to="https://drive.google.com/drive/folders/1ysF4_C1aOVMXEBXBk3vxh3gqkOaqElcR?usp=drive_link"
               download
               target="_blank"
             >
