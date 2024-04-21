@@ -4,17 +4,31 @@ import Signin from "./Signin";
 import Loader from "../Loader/Loader";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/variants";
+import { Link } from "react-router-dom";
 
 const colleges = [
   "Akshaya College, Puttur",
-  "Alvas College, Moodubidre",
+  "Alva's College, Moodubidre",
   "Canara College, Mangalore",
+  "Carmel Degree College, Bantwal",
   "Dr. NSAM First Grade College, Nitte",
-  "Mahathma Gandhi Memorial College, Udupi",
+  "Govinda Das College, Surathkal",
+  "Mahatma Gandhi Memorial College, Udupi",
+  "Nehru Memorial College (NMC), Sullia",
   "Padua Degree College, Mangalore",
   "Sacred Heart College, Madanthyar",
   "SDM College of Business Management, Mangalore",
-  "St Philomena College, Puttur",
+  "Sharada College, Mangalore",
+  "Shree Devi College, Mangalore",
+  "Shree Devi College of Information Science, Mangalore",
+  "Sri Bhuvanendra College, Karkala",
+  "Sri Mahaveera College, Moodbidri",
+  "Sri Venkataramana Swamy College, Bantwal",
+  "Srinivas First Grade College, Mangalore",
+  "Srinivas Institute of Computer Science and Information Science, Mangalore",
+  "St. Agnes College, Mangalore",
+  "St. Aloysius College (Deemed to be University), Mangalore",
+  "St. Philomena College, Puttur",
   "Vivekananda College, Puttur",
   "Yenepoya Institute of Arts, Science, Commerce and Management",
 ];
@@ -40,6 +54,22 @@ const Signup = () => {
       {!loginmode ? (
         <>
           {loading ? <Loader /> : null}
+          <div className="text-white fixed top-4 ml-4 mt-2 z-50  px-4 w-full mr-4">
+            <div className="flex justify-center gap-7">
+              <Link
+                to={"/"}
+                className=" ml-2 mr-4 font-gilroy-light font-bold hover:text-yellow-500"
+              >
+                HOME
+              </Link>
+              <Link
+                to={"/dev"}
+                className="ml-2 font-gilroy-light font-bold hover:text-yellow-500"
+              >
+                CONTACT
+              </Link>
+            </div>
+          </div>
           <motion.div
             variants={fadeIn("up", 0.4)}
             initial="hidden"
@@ -48,7 +78,7 @@ const Signup = () => {
             className="bg-black w-screen flex lg:justify-center lg:items-center lg:h-screen"
           >
             <div className="flex flex-col lg:flex-row lg:items-center xl:w-3/4 lg:w-[90vw] lg:h-3/4 lg:rounded-xl w-screen">
-              <div className="bg-gray-500 h-80 bg-bottom bg-cover bg-[url('/Public/Images/Login/2.webp')] lg:h-full lg:w-3/4 lg:rounded-xl animate-pulse duration-[4000]"></div>
+              <div className="bg-gray-500 h-80 bg-bottom bg-cover bg-[url('/Public/Images/Login/2.webp')] lg:h-full lg:w-3/4 lg:rounded-xl animate-pulse "></div>
               <div className="px-16 py-14 lg:h-screen lg:w-full lg:pt-16 sm:text-center">
                 <h1 className="sm:text-3xl text-[4.99vw] text-yellow-500 font-megatron ">
                   Register with your e-mail

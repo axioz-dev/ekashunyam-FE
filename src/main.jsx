@@ -3,13 +3,22 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import axios from "axios";
 import { Toaster, ToastBar } from "react-hot-toast";
-import { RouterProvider, Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
+import {
+  RouterProvider,
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import Loader from "./components/Loader/Loader";
 
 const Rules = React.lazy(() => import("../src/Pages/Rules"));
 const Home = React.lazy(() => import("./Pages/Home"));
 const Login = React.lazy(() => import("./Pages/Login"));
 const GlobalError = React.lazy(() => import("./Pages/GlobalError"));
 const Registration = React.lazy(() => import("./Pages/FestRegistration"));
+const Developers = React.lazy(() =>
+  import("./components/Additional/Developers/Developers")
+);
 
 axios.defaults.baseURL = "https://ekashunyam-be.onrender.com/";
 // axios.defaults.baseURL = "http://localhost:8080/";
@@ -24,13 +33,14 @@ const router = createBrowserRouter(
       </Route>,
       <Route path="/login" element={<Login />} />,
       <Route path="/register" element={<Registration />} />,
+      <Route path="/dev" element={<Developers />} />,
       <Route path="*" element={<GlobalError />} />,
     ],
   ])
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Suspense fallback={<div className="text-white">Loading...</div>}>
+  <Suspense fallback={<Loader />}>
     <RouterProvider router={router} />
     <Toaster
       renderToast={(t) => (

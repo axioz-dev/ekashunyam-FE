@@ -5,6 +5,7 @@ const Signup = lazy(() => import("./Signup"));
 import Loader from "../Loader/Loader";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/variants";
+import { Link } from "react-router-dom";
 
 const Signin = () => {
   const { loading, signinverify } = useSignin();
@@ -24,17 +25,26 @@ const Signin = () => {
       {loginmode ? (
         <>
           {loading ? <Loader /> : null}
+          <div className="text-white fixed top-4 ml-4 mt-2 z-50  px-4 w-full mr-4">
+            <div className="flex justify-center gap-7">
+              <Link to={"/"} className=" ml-2 mr-4 font-gilroy-light font-bold hover:text-yellow-500">
+                HOME
+              </Link>
+              <Link to={"/dev"} className="ml-2 font-gilroy-light font-bold hover:text-yellow-500">
+                CONTACT
+              </Link>
+            </div>
+          </div>
           <motion.div
             variants={fadeIn("down", 0.4)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.2 }}
-            className="bg-black w-screen flex lg:justify-center lg:items-center lg:h-screen"
+            className="bg-black w-screen flex lg:justify-center lg:items-center lg:h-screen text-center"
           >
             <div className="flex flex-col lg:flex-row lg:items-center xl:w-3/4 lg:w-[90vw] lg:h-3/4 lg:rounded-xl w-screen ">
-              <div className="bg-gray-500 h-80 bg-bottom bg-cover bg-[url('/Public/Images/Login/1.webp')] lg:h-full lg:w-3/4 lg:rounded-xl animate-pulse duration-[4000]"></div>
-              {/* D:\ekashunyam_final\ekashunyam-FE\Public\Images\Login\1.webp */}
-              <div className="px-16 py-14 lg:h-screen lg:w-full lg:pt-48 sm:text-center">
+              <div className="bg-gray-500 h-80 bg-bottom bg-cover bg-[url('/Public/Images/Home/wl6.jpg')] lg:h-full lg:w-3/4 lg:rounded-xl animate-pulse"></div>
+              <div className="px-8 sm:px-16 py-14 lg:h-screen lg:w-full lg:pt-48 sm:text-center">
                 <h1 className="sm:text-3xl text-[4.99vw] text-yellow-500 font-megatron ">
                   Back again ? log in now !
                 </h1>
@@ -47,7 +57,7 @@ const Signin = () => {
                       htmlFor="email"
                       className="block text-sm font-medium text-white mt-8"
                     >
-                      EMAIL OR USERNAME
+                      EMAIL
                     </label>
                     <input
                       type="text"
@@ -90,8 +100,7 @@ const Signin = () => {
                   </div>
                   <button
                     type="submit"
-                    // className="text-black bg-white w-full py-2.5 rounded-lg mt-6 hover:bg-slate-200 text-base font-semibold mb-6"
-                    className="font-gilroy tracking-wider inline-flex h-12 w-full py-2.5 animate-shimmer items-center justify-center rounded-lg mb-6 mt-6 border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-yellow-100 transition-colors hover:outline-none hover:ring-1 hover:ring-yellow-400 hover:ring-offset-1 hover:ring-offset-yellow-50"
+                    className="font-gilroy tracking-wider inline-flex h-12 w-full py-2.5 animate-shimmer items-center justify-center rounded-[5px] mb-6 mt-6 border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-yellow-100 transition-colors hover:outline-none hover:ring-1 hover:ring-yellow-400 hover:ring-offset-1 hover:ring-offset-yellow-50"
                   >
                     Log in now
                   </button>

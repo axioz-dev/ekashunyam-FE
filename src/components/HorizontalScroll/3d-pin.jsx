@@ -23,7 +23,7 @@ export const PinContainer = ({
   return (
     <div
       className={cn(
-        "relative group/pin z-50  cursor-pointer",
+        "relative group/pin z-50  cursor-pointer ",
         containerClassName
       )}
       onMouseEnter={onMouseEnter}
@@ -58,12 +58,12 @@ export const PinPerspective = ({ to }) => {
   const navigate = useNavigate();
   return (
     // pointer-events-none conflicting css property
-    <motion.div className=" w-80 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
+    <motion.div className=" w-80 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-50">
       <div className=" w-full h-full -mt-7 flex-none  inset-0">
         <div className="absolute top-0 inset-x-0  flex justify-center ">
           <button onClick={() => navigate(`/event/${to}`)}>
-            <div className="relative flex space-x-2 items-center z-10 rounded-full hover:bg-yellow-500 transition-colors duration-500 ease-in-out bg-zinc-950  py-0.5 px-4 ring-1 ring-white/10 ">
-              <div className="relative z-20 text-white text-sm font-bold inline-block py-2 ">
+            <div className="relative flex space-x-2 items-center z-10 rounded-full hover:bg-yellow-500 transition-colors duration-500 ease-in-out bg-zinc-800  py-0.5 px-4 ring-1 ring-white/10 border border-blue-600 ">
+              <div className="relative z-20 text-white text-sm font-bold inline-block py-2 capitalize">
                 read more
               </div>
 
