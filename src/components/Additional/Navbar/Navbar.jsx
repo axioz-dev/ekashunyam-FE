@@ -28,8 +28,8 @@ const Navbar = ({ scrollRefs }) => {
               className="flex items-center  rtl:space-x-reverse ml-8 h-10 w-10 hover:cursor-pointer"
             >
               <img
-                src="/Public/Images/Home/Logo.webp"
-                alt="IT Club Logo"
+                src="/Images/Home/Logo.webp"
+                alt="logo"
                 className="h-10 w-10 object-cover object-center"
               />
             </div>
