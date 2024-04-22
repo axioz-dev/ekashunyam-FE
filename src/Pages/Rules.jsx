@@ -92,6 +92,8 @@ function Rules() {
         contact1: "7899935742",
         coOrdinator2: "Nishmitha V G",
         contact2: "8660770807",
+        coOrdinator3: "pavan Kumar",
+        contact3: "8431654537",
       },
       {
         id: "the-last-knight",
@@ -119,7 +121,7 @@ function Rules() {
           "No gadgets will be provided for the event.",
           "Hacking or foul plays will lead to disqualification",
           "Maps needed: Erangel,Miramar,Sanhok",
-          "Both android and ios devices are allowd",
+          "Both android and ios devices are allowed",
         ],
         coOrdinator1: "Sharan",
         contact1: "8431328399",
@@ -160,6 +162,8 @@ function Rules() {
     contact1,
     coOrdinator2,
     contact2,
+    coOrdinator3,
+    contact3,
   } = eventDetails;
 
   const handleNavigate = () => {
@@ -196,7 +200,7 @@ function Rules() {
               ))}
           </ul>
         </div>
-        <div className="flex justify-center items-center lg:gap-20 gap-10">
+        <div className="flex justify-center items-center lg:gap-20 gap-10 flex-wrap">
           <div>
             <p className="lg:text-2xl text-xl font-semibold lg:mb-2 mb-1">
               {coOrdinator1}
@@ -215,6 +219,19 @@ function Rules() {
                 <img src={call} alt="call icon" className="lg:w-6 w-4" />
                 <p className="lg:text-2xl text-base font-semibold">
                   {contact2}
+                </p>
+              </div>
+            </div>
+          )}
+          {coOrdinator3 && (
+            <div>
+              <p className="lg:text-2xl text-xl font-semibold lg:mb-2 mb-1">
+                {coOrdinator3}
+              </p>
+              <div className="flex lg:gap-4 gap-1">
+                <img src={call} alt="call icon" className="lg:w-6 w-4" />
+                <p className="lg:text-2xl text-base font-semibold">
+                  {contact3}
                 </p>
               </div>
             </div>
