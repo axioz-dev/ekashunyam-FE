@@ -12,10 +12,9 @@ const GeneralRules = lazy(() =>
 const Brochure = lazy(() =>
   import("@/components/Additional/Brochure/Brochure")
 );
-
 const Navbar = lazy(() => import("@/components/Additional/Navbar/Navbar"));
-
 const Footer = lazy(() => import("@/components/Additional/Footer/Footer"));
+const Marquee = lazy(() => import("@/components/Additional/Marquee/Marquee"));
 
 const Home = () => {
   const scrollRefs = useRef(null);
@@ -27,6 +26,9 @@ const Home = () => {
       </Suspense>
       <Suspense fallback={<Loader />}>
         <Landing scrollRefs={scrollRefs}></Landing>
+      </Suspense>
+      <Suspense fallback={<Loader />}>
+        <Marquee />
       </Suspense>
       <Suspense fallback={<Loader />}>
         <Glass />

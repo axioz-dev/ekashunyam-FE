@@ -10,7 +10,7 @@ const GeneralRules = () => {
         <div className="border p-6 rounded-[10px]">
           <ul className="flex flex-col gap-4 font-gilroy-light md:text-2xl ">
             <li>
-              - “EKASHUNYAM” is open to BCA,BSC and BVOC [Software] students.
+              - “EKASHUNYAM” is open to BCA,BSC [Computer Science] and BVOC [Software] students.
             </li>
             <li>- A maximum of 16 students are allowed per team.</li>
             <li>- Two teams can participate from each college.</li>

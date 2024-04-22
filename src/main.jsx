@@ -57,7 +57,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       toastOptions={{
         className: "",
         style: {
-          fontFamily: "megatron",
+          fontFamily: 'Megatron-rAo9',
           border: "1px solid #713200",
           paddingInline: "16px",
           color: "white",

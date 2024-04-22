@@ -46,6 +46,11 @@ html {
   display: none;
 }
 
+/* Changing select color */
+::selection {
+  background: rgb(186, 55, 35);
+}
+
 /* darkness for image */
 .bg-image {
   position: relative;
@@ -59,4 +64,10 @@ html {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
+}
+
+/* scaling up class on hover */
+.scaleup:hover {
+  transform: scale(2);
+  /* transition: transform 0.5s; */
 }

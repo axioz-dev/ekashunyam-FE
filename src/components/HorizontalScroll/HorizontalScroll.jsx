@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Card from "./Card.jsx";
+import { ArrowDownIcon } from "@heroicons/react/24/solid";
 
 //importing images
 import img1 from "/Public/Horizontal/img14.jpg";
@@ -58,7 +59,7 @@ function HorizontalScroll() {
   return (
     <>
       <div
-        className="overflow-hidden h-screen  bg-center bg-cover bg-[url('/Public/Images/Home/3.webp')] "
+        className="overflow-hidden h-screen  bg-center bg-cover bg-[url('/Public/Images/Home/3.webp')]"
         id="scroll-wrapper"
       >
         <div className=" text-6xl text-center pt-8 pb-20 text-white font-megatron">
@@ -117,6 +118,12 @@ function HorizontalScroll() {
             img={img8}
             to={"cybernetics-lens"}
           />
+        </div>
+        <div className="text-white text-center mt-24 flex flex-col gap-4 font-gilroy-light justify-center items-center">
+          <div className="w-40 ">
+            <h1 className="bg-yellow-400 py-2 text-black rounded-full animate-pulse duration-1000">Scroll down</h1>
+          </div>
+          <ArrowDownIcon className="text-white h-8 animate-bounce" />
         </div>
       </div>
     </>
