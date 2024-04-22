@@ -112,9 +112,8 @@ function Rules() {
       {
         id: "battle-arena",
         eventName: "Battle Arena",
-        subName: "Gaming",
+        subName: "Gaming[BGMI]",
         rules: [
-          "Starts at 9:30 AM",
           "Two make a team",
           "Participants' levels should be above 20.",
           "No gadgets will be provided for the event.",
