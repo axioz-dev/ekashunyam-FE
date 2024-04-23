@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import { fadeIn } from "@/utils/variants";
+import { CodeBracketIcon } from "@heroicons/react/24/solid";
 
 const Developers = () => {
   const navigate = useNavigate();
@@ -16,11 +17,12 @@ const Developers = () => {
     >
       <div className="flex justify-center items-center gap-4 ">
         <h1 className="text-center pt-10 pb-10  font-megatron text-3xl text-white  md:text-7xl">
-          CONTACT US !
+          Web Architects
         </h1>
+        <CodeBracketIcon className="text-blue-400 h-8 md:h-16"/>
       </div>
 
-      <section className="flex flex-col gap-14 justify-center items-center px-4 md:gap-28  md:pb-4  h-full">
+      <section className="flex flex-col gap-14 justify-center items-center px-4 md:gap-20  md:pb-4  h-full">
         <div className="border px-8 py-2 rounded-[8px]">
           <h3 className="text-white  font-gilroy-light text-center md:text-2xl font-bold">
             Shainil P.S
