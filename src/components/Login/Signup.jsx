@@ -22,6 +22,7 @@ const colleges = [
   "Shree Devi College, Mangalore",
   "Shree Devi College of Information Science, Mangalore",
   "Sri Bhuvanendra College, Karkala",
+  "Sri Dhavala College, Moodabidri",
   "Sri Mahaveera College, Moodbidri",
   "Sri Venkataramana Swamy College, Bantwal",
   "Srinivas First Grade College, Mangalore",
