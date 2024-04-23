@@ -62,7 +62,7 @@ const errhandle = (formFields) => {
                 toast.error("Please fill all the fields");
                 return false;
             }
-            if (participant.name.trim() === "" || !/^[a-zA-Z0-9]+$/.test(participant.name)) {
+            if (participant.name.trim() === "" || !/^[a-zA-Z0-9. ]+$/.test(participant.name)) {
                 toast.error("Name is not valid");
                 return false;
             }
