@@ -28,7 +28,7 @@ const Form = ({ regdata }) => {
     event4: {
       participants: [
         { name: "", contact: "" },
-        // { name: "", contact: "" },
+        { name: "", contact: "" },
       ],
     },
 
