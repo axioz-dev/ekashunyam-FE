@@ -94,7 +94,7 @@ const BentoBox = ({ regdata }) => {
                     </div>
                     <div className="font-gilroy-light">
                       <p className="mt-2 text-white capitalize">
-                        The registration fees of 980 per team shall be paid on
+                        The registration fees of 500 per team shall be paid on
                         the spot.
                       </p>
                       <p className="mt-2 text-white capitalize">
