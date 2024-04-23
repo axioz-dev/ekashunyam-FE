@@ -14,7 +14,7 @@ const GeneralRules = () => {
             </li>
             <li>- A maximum of 16 students are allowed per team.</li>
             <li>- Two teams can participate from each college.</li>
-            <li>- The registration fees stands at 980 per team.</li>
+            <li>- The registration fees stands at 500 per team.</li>
             <li>- Teams must confirm their participation through website.</li>
             <li>- All participants must be present at 9.00 am.</li>
             <li>
