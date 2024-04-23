@@ -15,7 +15,7 @@ import img6 from "/Public/Horizontal/img6.jpg";
 import img7 from "/Public/Horizontal/img10.jpg";
 import img8 from "/Public/Horizontal/img2.jpg";
 
-function HorizontalScroll() {
+function HorizontalScroll({ generalrulesref }) {
   useEffect(() => {
     const storedScrollPosition = parseInt(
       localStorage.getItem("scrollPosition"),
@@ -55,6 +55,10 @@ function HorizontalScroll() {
     },
     { container }
   );
+
+  const genralrulessection = () => {
+    generalrulesref.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
@@ -121,9 +125,16 @@ function HorizontalScroll() {
         </div>
         <div className="text-white text-center mt-24 flex flex-col gap-4 font-gilroy-light justify-center items-center">
           <div className="w-40 ">
-            <h1 className="bg-yellow-400 py-2 text-black rounded-full animate-pulse duration-1000">Scroll down</h1>
+            <h1
+              onClick={genralrulessection}
+              className="bg-yellow-400 py-2 text-black rounded-full animate-pulse duration-1000 cursor-pointer"
+            >
+              Scroll down
+            </h1>
           </div>
-          <ArrowDownIcon className="text-white h-8 animate-bounce" />
+          <ArrowDownIcon
+          onClick={genralrulessection}
+          className="text-white h-8 animate-bounce cursor-pointer" />
         </div>
       </div>
     </>
