@@ -18,6 +18,7 @@ const Marquee = lazy(() => import("@/components/Additional/Marquee/Marquee"));
 
 const Home = () => {
   const scrollRefs = useRef(null);
+  const generalrulesref = useRef(null);
 
   return (
     <div className="overflow-hidden">
@@ -34,10 +35,10 @@ const Home = () => {
         <Glass />
       </Suspense>
       <Suspense fallback={<Loader />}>
-        <HorizontalScroll />
+        <HorizontalScroll generalrulesref={generalrulesref} />
       </Suspense>
       <Suspense fallback={<Loader />}>
-        <GeneralRules />
+        <GeneralRules generalrulesref={generalrulesref} />
       </Suspense>
       <Suspense fallback={<Loader />}>
         <Brochure />
