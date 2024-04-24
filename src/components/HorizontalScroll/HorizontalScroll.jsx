@@ -124,7 +124,7 @@ function HorizontalScroll({ generalrulesref }) {
           />
         </div>
         <div className="text-white text-center mt-24 flex flex-col gap-4 font-gilroy-light justify-center items-center">
-          <div className="w-40 ">
+          <div className="w-40 mt-[-10px]">
             <h1
               onClick={genralrulessection}
               className="bg-yellow-400 py-2 text-black rounded-full animate-pulse duration-1000 cursor-pointer"

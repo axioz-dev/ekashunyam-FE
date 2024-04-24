@@ -2,6 +2,7 @@ import React from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const BentoBox = ({ regdata }) => {
   const navigate = useNavigate();
@@ -63,7 +64,7 @@ const BentoBox = ({ regdata }) => {
                         EKASHUNYAM
                       </h2>
                       <p className=" text-white font-gilroy-light">
-                        An Inter Colegiate IT fest
+                        An Inter Collegiate IT fest
                       </p>
                     </div>
                   </div>
@@ -88,29 +89,35 @@ const BentoBox = ({ regdata }) => {
                 <div className="col-span-full lg:col-span-3 overflow-hidden relative p-8 rounded-xl bg-white  border-gray-200 bg-cover bg-[url('/Public/Images/Register/gradients/gradient-5.webp')] cursor-pointer group-hover:blur-[2px] hover:!blur-none group-hover:scale-[0.85] hover:!scale-105 duration-500">
                   <div className="flex flex-col justify-center items-center gap-4  h-full">
                     <div>
-                      <h2 className="text-5xl font-medium transition  text-center text-white font-megatron">
-                        Entry fees
+                      <h2 className="sm:text-5xl text-3xl font-medium transition  text-center text-white font-megatron">
+                        Don't have a team ?
                       </h2>
+                      <p className="text-center">Come, join us individually</p>
                     </div>
                     <div className="font-gilroy-light">
-                      <p className="mt-2 text-white capitalize">
-                        The registration fees of 500 per team shall be paid on
-                        the spot.
-                      </p>
-                      <p className="mt-2 text-white capitalize">
+                      <Link className="">
+                        <button
+                          onClick={() => navigate("/individual")}
+                          type="button"
+                          className="bg-white  py-2  md:px-8 text-xm  px-3 font-megatron rounded-[5px] animate-shimmer border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium  text-yellow-100 transition-colors hover:outline-none hover:ring-1 hover:ring-yellow-400 hover:ring-offset-1 hover:ring-offset-yellow-50 "
+                        >
+                          Know More
+                        </button>
+                      </Link>
+                      {/* <p className="mt-2 text-white capitalize">
                         All participants must be present at 9.00 am.
-                      </p>
-                      <p className="mt-2 text-white capitalize">
+                      </p> */}
+                      {/* <p className="mt-2 text-white capitalize">
                         Breakfast and lunch will be provided.
-                      </p>
-                      <div className="flex-col">
+                      </p> */}
+                      {/* <div className="flex-col">
                         <p className="mt-2 text-white capitalize">
                           Date : 30th April 2024
                         </p>
                         <p className="mt-2 text-white capitalize">
                           Venue : SDM College Ujire
                         </p>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -128,7 +135,7 @@ const BentoBox = ({ regdata }) => {
                     <button
                       onClick={logout}
                       type="button"
-                      className="bg-white  py-2  md:px-8 text-xm  px-3 font-megatron rounded-md animate-shimmer border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium  text-yellow-100 transition-colors hover:outline-none hover:ring-1 hover:ring-yellow-400 hover:ring-offset-1 hover:ring-offset-yellow-50 "
+                      className="bg-white  py-2  md:px-8 text-xm  px-3 font-megatron rounded-[5px] animate-shimmer border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] font-medium  text-yellow-100 transition-colors hover:outline-none hover:ring-1 hover:ring-yellow-400 hover:ring-offset-1 hover:ring-offset-yellow-50 "
                     >
                       Logout
                     </button>
