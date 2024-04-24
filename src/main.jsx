@@ -19,9 +19,10 @@ const Registration = React.lazy(() => import("./Pages/FestRegistration"));
 const Developers = React.lazy(() =>
   import("./components/Additional/Developers/Developers")
 );
+const Individual = React.lazy(() => import("./Pages/Individual"));
 
-axios.defaults.baseURL = "https://api.ekashunyam.tech/";
-// axios.defaults.baseURL = "http://localhost:8080";
+// axios.defaults.baseURL = "https://api.ekashunyam.tech/";
+axios.defaults.baseURL = "http://localhost:8080";
 
 axios.defaults.withCredentials = true;
 
@@ -36,6 +37,7 @@ const router = createBrowserRouter(
       <Route path="/register" element={<Registration />} />,
       <Route path="/dev" element={<Developers />} />,
       <Route path="*" element={<GlobalError />} />,
+      <Route path="/individual" element={<Individual />} />,
     ],
   ])
 );
@@ -58,7 +60,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       toastOptions={{
         className: "",
         style: {
-          fontFamily: 'Megatron-rAo9',
+          fontFamily: "Megatron-rAo9",
           border: "1px solid #713200",
           paddingInline: "16px",
           color: "white",

@@ -26,9 +26,9 @@ const Landing = ({ scrollRefs },ref) => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.5 }}
-          className="flex flex-col justify-center items-center text-center gap-2"
+          className="flex flex-col justify-center items-center text-center gap-2 "
         >
-          <h1 className="text-white text-sm font-gilroy-light">
+          <h1 className="text-white text-sm font-gilroy sm:text-2xl">
             SRI DHARMASTHALA MANJUNATHESHWARA COLLEGE
             <br />
             (Autonomous),UJIRE-574 240
@@ -36,10 +36,10 @@ const Landing = ({ scrollRefs },ref) => {
           <h6 className="text-white text-[0.70rem] font-gilroy-light">
             (Re-Accredited by NAAC at A++ Grade)
           </h6>
-          <h5 className="text-white text-md font-gilroy-bold">
+          <h5 className="text-white text-md font-gilroy">
             Department of Computer Science
           </h5>
-          <h4 className="text-lg font-gilroy-light text-yellow-300">IT CLUB</h4>
+          <h4 className="text-2xl font-gilroy text-yellow-300 sm:text-4xl">IT CLUB</h4>
           <h6 className="text-white text-sm font-gilroy-light">ORGANIZES</h6>
         </motion.div>
         <motion.h1
@@ -56,7 +56,7 @@ const Landing = ({ scrollRefs },ref) => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.5 }}
-          className="font-megatron text-lg  bg-gradient-to-tr from-purple-900 via-yellow-900 to-yellow-400 bg-clip-text text-transparent animatee-fadeIn"
+          className="font-megatron text-lg  bg-gradient-to-tr from-purple-300 via-yellow-300 to-yellow-700 bg-clip-text text-transparent animatee-fadeIn"
         >
           An Intercollegiate Fest
         </motion.h4>

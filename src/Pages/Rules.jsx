@@ -53,10 +53,10 @@ function Rules() {
           "the details of each round will be disclosed on the spot. ",
           "system will be provided ",
         ],
-        coOrdinator1: "Maneesh Kumar",
-        contact1: "8792489207",
-        // coOrdinator2: "Shreenidhi",
-        // contact2: "9019624337",
+        coOrdinator1: "Nagachaithanya",
+        contact1: "8431634118",
+        coOrdinator2: "Spandana",
+        contact2: "9148239448",
       },
       {
         id: "prime-expo",
@@ -73,6 +73,8 @@ function Rules() {
         ],
         coOrdinator1: "Charan B S  ",
         contact1: "7406832289",
+        coOrdinator2: "Akshay G  ",
+        contact2: "9141030375",
       },
       {
         id: "energon-rhythm",

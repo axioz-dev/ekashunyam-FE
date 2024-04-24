@@ -49,6 +49,7 @@ html {
 /* Changing select color */
 ::selection {
   background: rgb(186, 55, 35);
+  color: #fff;
 }
 
 /* darkness for image */
