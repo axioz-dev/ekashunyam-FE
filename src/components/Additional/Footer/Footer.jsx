@@ -37,7 +37,7 @@ const Footer = ({ scrollRef }) => {
             Icon={InstagramIcon}
             text={"Instagram"}
             link={
-              "https://www.instagram.com/ekashunyam?igsh=MTZlMXJpbWN6M3Zuaw=="
+              "https://www.instagram.com/ekashunyam_2k24?igsh=MTBjeTFxbDdtdzM0bQ=="
             }
           />
           <Cards Icon={PhoneIcon} text={"8792489207"} />
