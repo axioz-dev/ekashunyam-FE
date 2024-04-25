@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Individual = () => {
   const navigate = useNavigate();
   return (
-    <div className="border border-blue-200 w-screen">
+    <div className=" w-screen">
       <div className="text-white px-4 pb-4 py-8 capitalize   mx-16 ">
         <div className="flex justify-center items-center flex-col gap-4 xl:mx-80 md:mx-32 lg:24">
           <h1 className="text-3xl text-center py-4 font-megatron sm:text-3xl text-yellow-500">
