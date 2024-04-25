@@ -21,8 +21,7 @@ const Developers = React.lazy(() =>
 );
 const Individual = React.lazy(() => import("./Pages/Individual"));
 
-// axios.defaults.baseURL = "https://api.ekashunyam.tech/";
-axios.defaults.baseURL = "http://localhost:8080";
+ axios.defaults.baseURL = "https://api.ekashunyam.tech/";
 
 axios.defaults.withCredentials = true;
 
