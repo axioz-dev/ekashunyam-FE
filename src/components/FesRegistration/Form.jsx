@@ -3,6 +3,7 @@ import { useState } from "react";
 import useSubmit from "@/Hooks/useSubmit";
 import Loader from "../Loader/Loader";
 import BentoBox from "../Additional/BentoBox/BentoBox";
+import toast from 'react-hot-toast';
 
 const Form = ({ regdata }) => {
   const { loading, formverify } = useSubmit();
@@ -47,9 +48,7 @@ const Form = ({ regdata }) => {
     },
 
     event7: {
-      participants: [
-        { name: "", contact: "" },
-      ],
+      participants: [{ name: "", contact: "" }],
     },
 
     event8: {
@@ -86,7 +85,10 @@ const Form = ({ regdata }) => {
         },
       }));
     } else {
-      alert("Maximum 5 participants allowed");
+      toast.error("Maximum 5 members are allowed", {
+        duration: 2000,
+        position: "top-center",
+      });
     }
   };
 
